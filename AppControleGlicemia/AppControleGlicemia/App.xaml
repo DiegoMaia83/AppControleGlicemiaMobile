@@ -4,5 +4,20 @@
              x:Class="AppControleGlicemia.App">
     <Application.Resources>
 
+        <ResourceDictionary>
+
+            <Color x:Key="ColorPrimary">#27B0AF</Color>
+            <Color x:Key="ColorSecondary">#16646E</Color>
+            <Color x:Key="ColorLight">#EDE4E0</Color>
+            <Color x:Key="ColorNeutral">#DDCDBE</Color>
+            <Color x:Key="ColorDark">#4A3F2A</Color>
+
+            <x:String x:Key="IconDroplet">&#xf043;</x:String>
+            <x:String x:Key="IconList">&#xf03a;</x:String>
+            <x:String x:Key="IconHome">&#xf015;</x:String>
+            <x:String x:Key="IconFingerPrint">&#xf577;</x:String>
+            
+        </ResourceDictionary>
+
     </Application.Resources>
 </Application>

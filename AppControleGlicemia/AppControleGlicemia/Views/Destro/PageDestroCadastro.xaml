@@ -1,10 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="AppControleGlicemia.Views.Destro.PageDestroCadastro">
+             x:Class="AppControleGlicemia.Views.Destro.PageDestroCadastro"
+             Title="Medir destro">
     <ContentPage.Content>
 
-        <Grid>
+        <Grid BackgroundColor="{StaticResource ColorLight}">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*" />
                 <RowDefinition Height="Auto" />
@@ -18,34 +19,30 @@
             </Grid.ColumnDefinitions>
 
             <StackLayout Grid.Row="0" Grid.Column="0">
-                <Label Text="1" />
             </StackLayout>
             <StackLayout Grid.Row="0" Grid.Column="1">
                 
             </StackLayout>
 
             <StackLayout Grid.Row="1" Grid.ColumnSpan="2" Orientation="Horizontal">
-                <Button Text="-" 
-                        HorizontalOptions="EndAndExpand" 
-                        FontSize="20" 
-                        CornerRadius="25" 
-                        WidthRequest="50" 
-                        HeightRequest="50" 
+                <Button Text="-" TextColor="{StaticResource ColorLight}" 
+                        BackgroundColor="{StaticResource ColorSecondary}"
+                        HorizontalOptions="EndAndExpand" FontSize="20" 
+                        CornerRadius="25" WidthRequest="50" HeightRequest="50" 
                         VerticalOptions="CenterAndExpand" 
                         Clicked="BtAtualizaValor"/>
                 
-                <Entry x:Name="txtValorAferido" Text="0" 
+                <Entry x:Name="txtValorAferido" Text="0" FontAttributes="Bold"
+                       TextColor="{StaticResource ColorPrimary}" 
                        Keyboard="Numeric" 
                        HorizontalOptions="CenterAndExpand" 
                        FontSize="70" WidthRequest="150" MaxLength="3"
                        HorizontalTextAlignment="Center"/>
-                
-                <Button Text="+" 
-                        HorizontalOptions="StartAndExpand" 
-                        FontSize="20" 
-                        CornerRadius="25" 
-                        WidthRequest="50" 
-                        HeightRequest="50" 
+
+                <Button Text="+" TextColor="{StaticResource ColorLight}" 
+                        BackgroundColor="{StaticResource ColorSecondary}"
+                        HorizontalOptions="StartAndExpand" FontSize="20" 
+                        CornerRadius="25" WidthRequest="50" HeightRequest="50" 
                         VerticalOptions="CenterAndExpand" 
                         Clicked="BtAtualizaValor"/>         
             </StackLayout>
@@ -55,7 +52,13 @@
             </StackLayout>
 
             <StackLayout Grid.Row="3" Grid.ColumnSpan="2">
-                <Button x:Name="btInserir" Text="Inserir" Clicked="btInserir_Clicked" VerticalOptions="EndAndExpand"/>
+                <Button x:Name="btInserir" 
+                        Text="Inserir" 
+                        TextColor="{StaticResource ColorLight}" 
+                        BackgroundColor="{StaticResource ColorSecondary}"
+                        VerticalOptions="EndAndExpand"
+                        Margin="30"
+                        Clicked="btInserir_Clicked"/>
             </StackLayout>
         </Grid>
 

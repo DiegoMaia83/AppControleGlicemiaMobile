@@ -5,24 +5,37 @@
    
     <FlyoutPage.Flyout>
 
-        <ContentPage Padding="20" Title="Menu">
+        <ContentPage Padding="20" Title="Menu" BackgroundColor="{StaticResource ColorPrimary}">
 
             <StackLayout>
-                <Label Text="Home">
-                    <Label.GestureRecognizers>
-                        <TapGestureRecognizer x:Name="btHome" Tapped="btHome_Clicked" NumberOfTapsRequired="1"/>
-                    </Label.GestureRecognizers>
-                </Label>
-                <Label Text="Medir destro">
-                    <Label.GestureRecognizers>
-                        <TapGestureRecognizer x:Name="btDestroCadastro" Tapped="btDestroCadastro_Clicked" NumberOfTapsRequired="1"/>
-                    </Label.GestureRecognizers>
-                </Label>
-                <Label Text="Listar destro">
-                    <Label.GestureRecognizers>
-                        <TapGestureRecognizer x:Name="btDestroLista" Tapped="btDestroLista_Clicked" NumberOfTapsRequired="1"/>
-                    </Label.GestureRecognizers>
-                </Label>
+
+                <StackLayout Orientation="Horizontal" Margin="0,5">
+                    <Label Text="{StaticResource IconHome}" TextColor="{StaticResource ColorLight}" FontFamily="FASolid" FontSize="Medium" />
+                    <Label Text="Home" TextColor="{StaticResource ColorLight}" FontSize="Medium">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer x:Name="btHome" Tapped="btHome_Clicked" NumberOfTapsRequired="1"/>
+                        </Label.GestureRecognizers>
+                    </Label>                    
+                </StackLayout>                
+
+                <StackLayout Orientation="Horizontal" Margin="0,5">
+                    <Label Text="{StaticResource IconDroplet}" TextColor="{StaticResource ColorLight}" FontFamily="FASolid" FontSize="Medium" />
+                    <Label Text="Medir destro" TextColor="{StaticResource ColorLight}"  FontSize="Medium">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer x:Name="btDestroCadastro" Tapped="btDestroCadastro_Clicked" NumberOfTapsRequired="1"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" Margin="0,5">
+                    <Label Text="{StaticResource IconList}" TextColor="{StaticResource ColorLight}" FontFamily="FASolid" FontSize="Medium" />
+                    <Label Text="Listar destro" TextColor="{StaticResource ColorLight}" FontSize="Medium">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer x:Name="btDestroLista" Tapped="btDestroLista_Clicked" NumberOfTapsRequired="1"/>
+                        </Label.GestureRecognizers>                    
+                    </Label>                    
+                </StackLayout>
+
             </StackLayout>
             
         </ContentPage>

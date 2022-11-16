@@ -81,5 +81,36 @@ namespace AppControleGlicemia.Services
                 throw ex;
             }
         }
+
+        public double RetornarMediaDia()
+        {
+            try
+            {
+                var dayStart = DateTime.Now.AddDays(-1);
+                var dayEnd = DateTime.Now.AddDays(+1);
+                var day = DateTime.Now;
+                
+                // Melhorar essa consulta. O SQLite não consegue acessar as propriedades de um Datetime
+
+                var model = conn.Table<ModelDestro>().Where(x => x.DataAferido > dayStart && x.DataAferido < dayEnd).ToList();
+                //var model = conn.Table<ModelDestro>().Where(x => x.DataAferido == day).ToList();
+
+
+                int quantidade = 0;
+                int soma = 0;
+                foreach (var item in model){
+                    soma += item.ValorAferido;
+                    quantidade++;
+                }
+
+                double media = soma / quantidade;
+
+                return media;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

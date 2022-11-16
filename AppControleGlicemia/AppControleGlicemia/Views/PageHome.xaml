@@ -1,11 +1,79 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="AppControleGlicemia.Views.PageHome">
+             x:Class="AppControleGlicemia.Views.PageHome"
+             Title="Home">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Home" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" FontSize="Large" />
-            <Label x:Name="dbPath" />
-        </StackLayout>
+        
+        <Grid BackgroundColor="{StaticResource ColorLight}" Padding="20">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            
+            <!-- Tipo -->
+            <Frame Grid.Row="0" Grid.Column="0" Margin="20" BackgroundColor="Transparent">                
+                
+                <StackLayout>
+                    <Label Text="{StaticResource IconHome}" 
+                           FontSize="Medium" 
+                           TextColor="{StaticResource ColorSecondary}" 
+                           HorizontalOptions="CenterAndExpand" 
+                           VerticalOptions="EndAndExpand" 
+                           FontFamily="FASolid" />
+                    <Label Text="Média do dia" 
+                           TextColor="{StaticResource ColorSecondary}" 
+                           HorizontalOptions="CenterAndExpand" 
+                           VerticalOptions="Center" />
+                    <Label x:Name="txtMediaDia" Text="0" FontSize="45" FontAttributes="Bold"                           
+                           TextColor="{StaticResource ColorPrimary}" 
+                           HorizontalOptions="CenterAndExpand" 
+                           VerticalOptions="StartAndExpand" /> 
+                </StackLayout>
+            </Frame>
+
+            <!-- Tipo -->
+            <Frame Grid.Row="0" Grid.Column="1" Margin="20" BackgroundColor="Transparent">
+
+                <StackLayout>
+                    <Label Text="{StaticResource IconHome}" 
+                           FontSize="Medium" 
+                           TextColor="{StaticResource ColorSecondary}" 
+                           HorizontalOptions="CenterAndExpand" 
+                           VerticalOptions="EndAndExpand" 
+                           FontFamily="FASolid" />
+                    <Label Text="Média do dia" 
+                           TextColor="{StaticResource ColorSecondary}" 
+                           HorizontalOptions="CenterAndExpand" 
+                           VerticalOptions="Center" />
+                    <Label Text="122" FontSize="40" FontAttributes="Bold" 
+                           TextColor="{StaticResource ColorSecondary}" 
+                           HorizontalOptions="CenterAndExpand" 
+                           VerticalOptions="StartAndExpand" />
+                </StackLayout>
+            </Frame>
+
+            <StackLayout Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2">
+                <Label Text="{StaticResource IconFingerPrint}" TextColor="{StaticResource ColorSecondary}"
+                       FontSize="50" FontFamily="FASolid"
+                       HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="btInserirDestro" Tapped="btInserirDestro_Clicked" NumberOfTapsRequired="1"/>
+                    </Label.GestureRecognizers>
+                </Label>
+                <Label Text="Inserir destro" TextColor="{StaticResource ColorSecondary}"
+                       HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand"
+                       />
+            </StackLayout>
+        
+        </Grid>
+        
     </ContentPage.Content>
 </ContentPage>

@@ -14,7 +14,10 @@ namespace AppControleGlicemia
         {
             InitializeComponent();
 
-            MainPage = new PageMenu();
+            MainPage = new NavigationPage(new PageMenu())
+            {
+                BarBackgroundColor = Color.Gray
+            };
         }
 
         public App(string dbPath, string dbName)

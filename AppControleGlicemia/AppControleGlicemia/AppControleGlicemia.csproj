@@ -11,6 +11,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="fonts\fa-regular-400.ttf" />
+    <None Remove="fonts\fa-solid-900.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="fonts\fa-regular-400.ttf" />
+    <EmbeddedResource Include="fonts\fa-solid-900.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="sqlite-net-pcl" Version="1.8.116" />
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
     <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />

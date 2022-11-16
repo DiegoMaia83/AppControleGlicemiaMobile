@@ -16,23 +16,26 @@ namespace AppControleGlicemia.Views
         public PageMenu()
         {
             InitializeComponent();
+
+            this.Detail = new NavigationPage(new PageHome());
+            IsPresented = false;
         }
 
         private void btHome_Clicked(object sender, EventArgs e)
         {
-            this.Detail = new PageHome();
+            this.Detail = new NavigationPage(new PageHome());
             IsPresented = false;
         }
 
         private void btDestroCadastro_Clicked(object sender, EventArgs e)
         {
-            this.Detail = new PageDestroCadastro();
+            this.Detail = new NavigationPage(new PageDestroCadastro());
             IsPresented = false;
         }
 
         private void btDestroLista_Clicked(object sender, EventArgs e)
         {
-            this.Detail = new PageDestroLista();
+            this.Detail = new NavigationPage(new PageDestroLista());
             IsPresented = false;
         }
     }
