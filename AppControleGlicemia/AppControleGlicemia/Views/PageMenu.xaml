@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<FlyoutPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppControleGlicemia.Views.PageMenu">
+   
+    <FlyoutPage.Flyout>
+
+        <ContentPage Padding="20" Title="Menu">
+
+            <StackLayout>
+                <Label Text="Home">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="btHome" Tapped="btHome_Clicked" NumberOfTapsRequired="1"/>
+                    </Label.GestureRecognizers>
+                </Label>
+                <Label Text="Medir destro">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="btDestroCadastro" Tapped="btDestroCadastro_Clicked" NumberOfTapsRequired="1"/>
+                    </Label.GestureRecognizers>
+                </Label>
+                <Label Text="Listar destro">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="btDestroLista" Tapped="btDestroLista_Clicked" NumberOfTapsRequired="1"/>
+                    </Label.GestureRecognizers>
+                </Label>
+            </StackLayout>
+            
+        </ContentPage>
+        
+    </FlyoutPage.Flyout>
+
+    <FlyoutPage.Detail>
+
+        <ContentPage>
+
+
+        </ContentPage>
+        
+    </FlyoutPage.Detail>
+
+</FlyoutPage>

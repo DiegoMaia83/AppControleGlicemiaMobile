@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppControleGlicemia.Views.Destro.PageDestroCadastro">
+    <ContentPage.Content>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <StackLayout Grid.Row="0" Grid.Column="0">
+                <Label Text="1" />
+            </StackLayout>
+            <StackLayout Grid.Row="0" Grid.Column="1">
+                
+            </StackLayout>
+
+            <StackLayout Grid.Row="1" Grid.ColumnSpan="2" Orientation="Horizontal">
+                <Button Text="-" 
+                        HorizontalOptions="EndAndExpand" 
+                        FontSize="20" 
+                        CornerRadius="25" 
+                        WidthRequest="50" 
+                        HeightRequest="50" 
+                        VerticalOptions="CenterAndExpand" 
+                        Clicked="BtAtualizaValor"/>
+                
+                <Entry x:Name="txtValorAferido" Text="0" 
+                       Keyboard="Numeric" 
+                       HorizontalOptions="CenterAndExpand" 
+                       FontSize="70" WidthRequest="150" MaxLength="3"
+                       HorizontalTextAlignment="Center"/>
+                
+                <Button Text="+" 
+                        HorizontalOptions="StartAndExpand" 
+                        FontSize="20" 
+                        CornerRadius="25" 
+                        WidthRequest="50" 
+                        HeightRequest="50" 
+                        VerticalOptions="CenterAndExpand" 
+                        Clicked="BtAtualizaValor"/>         
+            </StackLayout>
+
+            <StackLayout Grid.Row="2" Grid.ColumnSpan="2" HorizontalOptions="Center">
+                <Label x:Name="txtUltimaAfericao" />
+            </StackLayout>
+
+            <StackLayout Grid.Row="3" Grid.ColumnSpan="2">
+                <Button x:Name="btInserir" Text="Inserir" Clicked="btInserir_Clicked" VerticalOptions="EndAndExpand"/>
+            </StackLayout>
+        </Grid>
+
+    </ContentPage.Content>
+</ContentPage>
