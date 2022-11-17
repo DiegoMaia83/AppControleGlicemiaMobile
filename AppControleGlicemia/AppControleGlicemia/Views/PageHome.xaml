@@ -8,6 +8,7 @@
         <Grid BackgroundColor="{StaticResource ColorLight}" Padding="20">
 
             <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
                 <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
                 <RowDefinition Height="Auto" />
@@ -17,50 +18,107 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            
-            <!-- Tipo -->
-            <Frame Grid.Row="0" Grid.Column="0" Margin="20" BackgroundColor="Transparent">                
-                
+
+            <Frame Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="{StaticResource ColorPrimary}" CornerRadius="5">
                 <StackLayout>
-                    <Label Text="{StaticResource IconHome}" 
-                           FontSize="Medium" 
-                           TextColor="{StaticResource ColorSecondary}" 
-                           HorizontalOptions="CenterAndExpand" 
-                           VerticalOptions="EndAndExpand" 
-                           FontFamily="FASolid" />
-                    <Label Text="Média do dia" 
-                           TextColor="{StaticResource ColorSecondary}" 
-                           HorizontalOptions="CenterAndExpand" 
-                           VerticalOptions="Center" />
-                    <Label x:Name="txtMediaDia" Text="0" FontSize="45" FontAttributes="Bold"                           
-                           TextColor="{StaticResource ColorPrimary}" 
-                           HorizontalOptions="CenterAndExpand" 
-                           VerticalOptions="StartAndExpand" /> 
-                </StackLayout>
+                     <StackLayout Orientation="Horizontal">
+                       <Label Text="Última medição" TextColor="{StaticResource ColorLight}"/>
+                       <Label x:Name="txtUltimaData" TextColor="{StaticResource ColorLight}"/> 
+                    </StackLayout>
+                    <StackLayout>
+                        <Label x:Name="txtUltimaMedicao" Text="222" FontSize="35" FontAttributes="Bold" TextColor="{StaticResource ColorLight}" />
+                    </StackLayout>
+                </StackLayout>       
             </Frame>
 
             <!-- Tipo -->
-            <Frame Grid.Row="0" Grid.Column="1" Margin="20" BackgroundColor="Transparent">
+            <StackLayout Grid.Row="1" Grid.ColumnSpan="2" VerticalOptions="StartAndExpand">
+                <Frame HasShadow="False" BackgroundColor="{StaticResource ColorSecondaryLight}" Padding="0,0,0,20">
+                    <StackLayout>
+                        <Label Text="Hoje" BackgroundColor="{StaticResource ColorPrimary}" TextColor="{StaticResource ColorLight}" Padding="5" Margin="0,0,0,20"/>
+                        <StackLayout Orientation="Horizontal">
+                            <StackLayout HorizontalOptions="CenterAndExpand">
+                                <Label Text="{StaticResource IconPen}" 
+                                    FontSize="Medium" 
+                                    TextColor="{StaticResource ColorSecondary}" 
+                                    HorizontalOptions="CenterAndExpand" 
+                                    VerticalOptions="EndAndExpand" 
+                                    FontFamily="FASolid" />
+                                <Label Text="Média" 
+                                    TextColor="{StaticResource ColorSecondary}" 
+                                    HorizontalOptions="CenterAndExpand" 
+                                    VerticalOptions="Center" />
+                                <Label x:Name="txtMediaHoje" Text="0" FontSize="45" FontAttributes="Bold"                           
+                                    TextColor="{StaticResource ColorPrimary}" 
+                                    HorizontalOptions="CenterAndExpand" 
+                                    VerticalOptions="StartAndExpand" />
+                            </StackLayout>
+                            <StackLayout HorizontalOptions="CenterAndExpand">
+                                <Label Text="{StaticResource IconPointer}" 
+                                    FontSize="Medium" 
+                                    TextColor="{StaticResource ColorSecondary}" 
+                                    HorizontalOptions="CenterAndExpand" 
+                                    VerticalOptions="EndAndExpand" 
+                                    FontFamily="FASolid" />
+                                <Label Text="Medições" 
+                                    TextColor="{StaticResource ColorSecondary}" 
+                                    HorizontalOptions="CenterAndExpand" 
+                                    VerticalOptions="Center" />
+                                <Label x:Name="txtQuantidadeHoje" Text="0" FontSize="45" FontAttributes="Bold"                           
+                                    TextColor="{StaticResource ColorPrimary}" 
+                                    HorizontalOptions="CenterAndExpand" 
+                                    VerticalOptions="StartAndExpand" />
+                            </StackLayout>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
 
-                <StackLayout>
-                    <Label Text="{StaticResource IconHome}" 
-                           FontSize="Medium" 
-                           TextColor="{StaticResource ColorSecondary}" 
-                           HorizontalOptions="CenterAndExpand" 
-                           VerticalOptions="EndAndExpand" 
-                           FontFamily="FASolid" />
-                    <Label Text="Média do dia" 
-                           TextColor="{StaticResource ColorSecondary}" 
-                           HorizontalOptions="CenterAndExpand" 
-                           VerticalOptions="Center" />
-                    <Label Text="122" FontSize="40" FontAttributes="Bold" 
-                           TextColor="{StaticResource ColorSecondary}" 
-                           HorizontalOptions="CenterAndExpand" 
-                           VerticalOptions="StartAndExpand" />
-                </StackLayout>
-            </Frame>
+            <!-- Tipo -->
+            <StackLayout Grid.Row="2" Grid.ColumnSpan="2" VerticalOptions="StartAndExpand">
+                <Frame HasShadow="False" BackgroundColor="{StaticResource ColorSecondaryLight}" Padding="0,0,0,20">                    
+                    <StackLayout>
+                        <Label Text="Ontem" BackgroundColor="{StaticResource ColorPrimary}" TextColor="{StaticResource ColorLight}" Padding="5" Margin="0,0,0,20"/>
+                        <StackLayout Orientation="Horizontal">
+                            <StackLayout HorizontalOptions="CenterAndExpand">
+                                <Label Text="{StaticResource IconPen}" 
+                                    FontSize="Medium" 
+                                    TextColor="{StaticResource ColorSecondary}" 
+                                    HorizontalOptions="CenterAndExpand" 
+                                    VerticalOptions="EndAndExpand" 
+                                    FontFamily="FASolid" />
+                                <Label Text="Média" 
+                                    TextColor="{StaticResource ColorSecondary}" 
+                                    HorizontalOptions="CenterAndExpand" 
+                                    VerticalOptions="Center" />
+                                <Label x:Name="txtMediaOntem" Text="0" FontSize="45" FontAttributes="Bold"                           
+                                    TextColor="{StaticResource ColorPrimary}" 
+                                    HorizontalOptions="CenterAndExpand" 
+                                    VerticalOptions="StartAndExpand" />
+                            </StackLayout>
+                            <StackLayout HorizontalOptions="CenterAndExpand">
+                                <Label Text="{StaticResource IconPointer}" 
+                                    FontSize="Medium" 
+                                    TextColor="{StaticResource ColorSecondary}" 
+                                    HorizontalOptions="CenterAndExpand" 
+                                    VerticalOptions="EndAndExpand" 
+                                    FontFamily="FASolid" />
+                                <Label Text="Medições" 
+                                    TextColor="{StaticResource ColorSecondary}" 
+                                    HorizontalOptions="CenterAndExpand" 
+                                    VerticalOptions="Center" />
+                                <Label x:Name="txtQuantidadeOntem" Text="0" FontSize="45" FontAttributes="Bold"                           
+                                    TextColor="{StaticResource ColorPrimary}" 
+                                    HorizontalOptions="CenterAndExpand" 
+                                    VerticalOptions="StartAndExpand" />
+                            </StackLayout>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
 
-            <StackLayout Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2">
+
+            <StackLayout Grid.Row="3" Grid.ColumnSpan="2">
                 <Label Text="{StaticResource IconFingerPrint}" TextColor="{StaticResource ColorSecondary}"
                        FontSize="50" FontFamily="FASolid"
                        HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand">

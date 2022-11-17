@@ -82,30 +82,29 @@ namespace AppControleGlicemia.Services
             }
         }
 
-        public double RetornarMediaDia()
+        public ModelEstatistica RetornarMediaDia(DateTime data)
         {
             try
             {
-                var dayStart = DateTime.Now.AddDays(-1);
-                var dayEnd = DateTime.Now.AddDays(+1);
-                var day = DateTime.Now;
-                
-                // Melhorar essa consulta. O SQLite não consegue acessar as propriedades de um Datetime
+                var dayStart = data.Date;
+                var dayEnd = data.Date.AddDays(+1);
 
-                var model = conn.Table<ModelDestro>().Where(x => x.DataAferido > dayStart && x.DataAferido < dayEnd).ToList();
-                //var model = conn.Table<ModelDestro>().Where(x => x.DataAferido == day).ToList();
-
+                var lista = conn.Table<ModelDestro>().Where(x => x.DataAferido >= dayStart && x.DataAferido < dayEnd).ToList();
 
                 int quantidade = 0;
                 int soma = 0;
-                foreach (var item in model){
+                foreach (var item in lista){
                     soma += item.ValorAferido;
                     quantidade++;
                 }
 
-                double media = soma / quantidade;
+                var estatistica = new ModelEstatistica()
+                {
+                    Media = soma / quantidade,
+                    Quantidade = quantidade
+                };
 
-                return media;
+                return estatistica;
             }
             catch (Exception ex)
             {

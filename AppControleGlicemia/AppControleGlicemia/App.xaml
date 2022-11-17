@@ -9,6 +9,7 @@
             <Color x:Key="ColorPrimary">#27B0AF</Color>
             <Color x:Key="ColorSecondary">#16646E</Color>
             <Color x:Key="ColorLight">#EDE4E0</Color>
+            <Color x:Key="ColorSecondaryLight">#F7F3F2</Color>
             <Color x:Key="ColorNeutral">#DDCDBE</Color>
             <Color x:Key="ColorDark">#4A3F2A</Color>
 
@@ -16,6 +17,8 @@
             <x:String x:Key="IconList">&#xf03a;</x:String>
             <x:String x:Key="IconHome">&#xf015;</x:String>
             <x:String x:Key="IconFingerPrint">&#xf577;</x:String>
+            <x:String x:Key="IconPen">&#xf304;</x:String>
+            <x:String x:Key="IconPointer">&#xf25a;</x:String>
             
         </ResourceDictionary>
 

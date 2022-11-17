@@ -20,7 +20,17 @@ namespace AppControleGlicemia.Views
         {
             InitializeComponent();
 
-            txtMediaDia.Text = dbDestro.RetornarMediaDia().ToString();
+            var mediaHoje = dbDestro.RetornarMediaDia(DateTime.Now);
+            txtMediaHoje.Text = mediaHoje.Media.ToString();
+            txtQuantidadeHoje.Text = mediaHoje.Quantidade.ToString();
+
+            var mediaOntem = dbDestro.RetornarMediaDia(DateTime.Now.AddDays(-1));
+            txtMediaOntem.Text = mediaOntem.Media.ToString();
+            txtQuantidadeOntem.Text = mediaOntem.Quantidade.ToString();
+
+            var ultimaMedicao = dbDestro.RetornarUltimaAfericao();
+            txtUltimaData.Text = ultimaMedicao.DataAferido.ToString();
+            txtUltimaMedicao.Text = ultimaMedicao.ValorAferido.ToString();
         }
 
         private void btInserirDestro_Clicked(object sender, EventArgs e)
