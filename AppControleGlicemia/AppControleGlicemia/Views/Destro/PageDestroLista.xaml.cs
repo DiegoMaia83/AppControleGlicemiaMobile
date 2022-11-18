@@ -17,14 +17,21 @@ namespace AppControleGlicemia.Views.Destro
         {
             InitializeComponent();
 
-            AtualizaLista();
+            AtualizaLista(0);
         }
 
-        public void AtualizaLista()
+        public void AtualizaLista(int idxPeriodo)
         {
             ServicesDbDestro dbDestro = new ServicesDbDestro(App.DbPath);
 
-            ListaDestro.ItemsSource = dbDestro.Listar();
+            ListaDestro.ItemsSource = dbDestro.Listar(idxPeriodo);
+        }
+
+        private void pckPeriodo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var idxPeriodo = pckPeriodo.SelectedIndex;
+
+            AtualizaLista(idxPeriodo);
         }
     }
 }

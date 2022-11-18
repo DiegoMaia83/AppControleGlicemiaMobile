@@ -39,7 +39,7 @@ namespace AppControleGlicemia.Views.Destro
                 DisplayAlert("Resultado da operação", dbDestro.StatusMessage, "OK");
 
                 FlyoutPage page = (FlyoutPage)Application.Current.MainPage;
-                page.Detail = new PageDestroLista();
+                page.Detail = new NavigationPage(new PageHome());
             }
             catch (Exception ex)
             {

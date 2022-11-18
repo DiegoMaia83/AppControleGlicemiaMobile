@@ -58,6 +58,53 @@ namespace AppControleGlicemia.Services
             }
         }
 
+        public List<ModelDestro> Listar(int periodo)
+        {
+            List<ModelDestro> lista = new List<ModelDestro>();
+
+            /*
+             * Período:
+             * 1 - Hoje
+             * 2 - Ontem
+             * 3 - Últimos 5 dias
+             * 4 - Últimos 30 dias
+             */
+
+            DateTime dayStart = DateTime.Now.Date;
+            DateTime dayEnd = DateTime.Now.Date.AddDays(+1);
+
+            switch (periodo)
+            {
+                case 0:
+                    dayStart = DateTime.Now.Date;
+                    dayEnd = DateTime.Now.Date.AddDays(+1);
+                    break;
+                case 1:
+                    dayStart = DateTime.Now.Date.AddDays(-1);
+                    dayEnd = DateTime.Now.Date;
+                    break;
+                case 2:
+                    dayStart = DateTime.Now.Date.AddDays(-4);
+                    dayEnd = DateTime.Now.Date.AddDays(+1);
+                    break;
+                case 3:
+                    dayStart = DateTime.Now.Date.AddDays(-29);
+                    dayEnd = DateTime.Now.Date.AddDays(+1);
+                    break;
+            }
+
+            try
+            {
+                lista = conn.Table<ModelDestro>().Where(x => x.DataAferido >= dayStart && x.DataAferido < dayEnd).ToList();
+
+                return lista;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
         public ModelDestro Retornar(int id)
         {
             try
@@ -100,7 +147,7 @@ namespace AppControleGlicemia.Services
 
                 var estatistica = new ModelEstatistica()
                 {
-                    Media = soma / quantidade,
+                    Media = quantidade > 0 ? soma / quantidade : 0,
                     Quantidade = quantidade
                 };
 

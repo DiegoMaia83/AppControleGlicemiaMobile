@@ -4,15 +4,28 @@
              x:Class="AppControleGlicemia.Views.Destro.PageDestroLista"
              Title="Útimos registros">
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout Padding="20" BackgroundColor="{StaticResource ColorLight}">
+
+            <Picker x:Name="pckPeriodo" HorizontalOptions="FillAndExpand" Title="Selecione o período" SelectedIndexChanged="pckPeriodo_SelectedIndexChanged" FontSize="16">
+                <Picker.Items>
+                    <x:String>Hoje</x:String>
+                    <x:String>Ontem</x:String>
+                    <x:String>Últimos 5 dias</x:String>
+                    <x:String>Últimos 30 dias</x:String>
+                </Picker.Items>
+            </Picker>
+
             <ListView x:Name="ListaDestro" HasUnevenRows="True">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <StackLayout>
-                                <Label Text="{Binding ValorAferido}" />
-                                <Label Text="{Binding DataAferido}" />
-                            </StackLayout>
+                            <Frame Padding="10" HasShadow="False" BackgroundColor="{StaticResource ColorSecondaryLight}" Margin="0,10,0,0">
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding ValorAferido, StringFormat='{0:000}'}" TextColor="{StaticResource ColorSecondary}" FontSize="20" FontAttributes="Bold" VerticalOptions="CenterAndExpand" />
+                                    <Label Text=" | " VerticalOptions="CenterAndExpand"/>
+                                    <Label Text="{Binding DataAferido}" TextColor="{StaticResource ColorSecondary}" VerticalOptions="CenterAndExpand" />
+                                </StackLayout>
+                            </Frame>
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
