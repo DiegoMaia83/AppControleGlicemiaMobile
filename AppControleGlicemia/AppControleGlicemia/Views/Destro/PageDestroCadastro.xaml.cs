@@ -21,6 +21,22 @@ namespace AppControleGlicemia.Views.Destro
             RetornarUltimaAfericao();
         }
 
+        public PageDestroCadastro(ModelDestro destro)
+        {
+            InitializeComponent();
+
+            gridBtAlterar.IsVisible = true;
+            gridBtInserir.IsVisible = false;
+
+            //RetornarUltimaAfericao();
+
+            txtDestroId.Text = destro.DestroId.ToString();
+            txtValorAferido.Text = destro.ValorAferido.ToString();
+            txtDataAferido.Text = destro.DataAferido.ToString();
+            txtUltimaAfericao.Text = String.Format("Valor aferido em {0}", destro.DataAferido.ToString());
+
+        }
+
         private void btInserir_Clicked(object sender, EventArgs e)
         {
             try
@@ -29,7 +45,7 @@ namespace AppControleGlicemia.Views.Destro
                 {
                     ValorAferido = Convert.ToInt32(txtValorAferido.Text),
                     DataAferido = DateTime.Now,
-                    Observacoes = "Teste"
+                    Observacoes = ""
                 };
 
                 ServicesDbDestro dbDestro = new ServicesDbDestro(App.DbPath);
@@ -83,10 +99,54 @@ namespace AppControleGlicemia.Views.Destro
 
             ModelDestro destro = dbDestro.RetornarUltimaAfericao();
 
-            txtValorAferido.Text = destro.ValorAferido.ToString();
-            txtUltimaAfericao.Text = String.Format("Última aferição {0} feita em {1}",
-                destro.ValorAferido.ToString(),
-                destro.DataAferido.ToString());
+            if (destro != null)
+            {
+                txtValorAferido.Text = destro.ValorAferido.ToString();
+                txtUltimaAfericao.Text = String.Format("Última aferição {0} feita em {1}",
+                    destro.ValorAferido.ToString(),
+                    destro.DataAferido.ToString());
+            }
+        }
+
+        private void btAlterar_Clicked(object sender, EventArgs e)
+        {
+            try
+            {
+                var destro = new ModelDestro();
+                destro.DestroId = Convert.ToInt32(txtDestroId.Text);
+                destro.ValorAferido = Convert.ToInt32(txtValorAferido.Text);
+                destro.DataAferido = Convert.ToDateTime(txtDataAferido.Text);
+                destro.Observacoes = "";
+
+                ServicesDbDestro dbDestro = new ServicesDbDestro(App.DbPath);
+
+                dbDestro.Alterar(destro);
+
+                DisplayAlert("Resultado da operação", dbDestro.StatusMessage, "OK");
+
+                FlyoutPage page = (FlyoutPage)Application.Current.MainPage;
+                page.Detail = new NavigationPage(new PageHome());
+            }
+            catch (Exception ex)
+            {
+                DisplayAlert("Erro", ex.Message, "Ok");
+            };
+        }
+
+        private async void btExcluir_Clicked(object sender, EventArgs e)
+        {
+            var resp = await DisplayAlert("Excluir registro", "Deseja realmente excluir essa medição? Essa operação é irreversível!", "Sim", "Não");
+
+            if(resp)
+            {
+                var id = Convert.ToInt32(txtDestroId.Text);
+                ServicesDbDestro dbDestro = new ServicesDbDestro(App.DbPath);
+                dbDestro.Excluir(id);
+                await DisplayAlert("Resultado da operação", dbDestro.StatusMessage, "OK");
+
+                FlyoutPage page = (FlyoutPage)Application.Current.MainPage;
+                page.Detail = new NavigationPage(new PageHome());
+            }
         }
     }
 }

@@ -42,6 +42,27 @@ namespace AppControleGlicemia.Services
             }
         }
 
+        public void Alterar(ModelDestro destro)
+        {
+            try
+            {
+                int result = conn.Update(destro);
+
+                if (result > 0)
+                {
+                    this.StatusMessage = string.Format("{0} registro(s) alterado(s)", result);
+                }
+                else
+                {
+                    this.StatusMessage = string.Format("0 registro(s) alterado(s)");
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
         public List<ModelDestro> Listar()
         {
             List<ModelDestro> lista = new List<ModelDestro>();
@@ -60,7 +81,7 @@ namespace AppControleGlicemia.Services
 
         public List<ModelDestro> Listar(int periodo)
         {
-            List<ModelDestro> lista = new List<ModelDestro>();
+            //List<ModelDestro> lista = new List<ModelDestro>();
 
             /*
              * Período:
@@ -95,7 +116,22 @@ namespace AppControleGlicemia.Services
 
             try
             {
-                lista = conn.Table<ModelDestro>().Where(x => x.DataAferido >= dayStart && x.DataAferido < dayEnd).ToList();
+                var resp = conn.Table<ModelDestro>().Where(x => x.DataAferido >= dayStart && x.DataAferido < dayEnd).ToList();
+
+                List<ModelDestro> lista = new List<ModelDestro>();
+
+                var i = 0;
+
+                foreach (var item in resp)
+                {                    
+                    var destro = new ModelDestro();
+                    destro = item;
+                    destro.Stats = destro.ValorAferido > i ? "IconUp" : destro.ValorAferido < i ? "IconDown" : "IconEqual";
+
+                    i = item.ValorAferido;
+
+                    lista.Add(destro);
+                }                
 
                 return lista;
             }
@@ -156,6 +192,20 @@ namespace AppControleGlicemia.Services
             catch (Exception ex)
             {
                 throw ex;
+            }
+        }
+
+        public void Excluir(int id)
+        {
+            try
+            {
+                int result = conn.Table<ModelDestro>().Delete(x => x.DestroId == id);
+
+                StatusMessage = string.Format("{0} Registro(s) excluídos(s)", result);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
             }
         }
     }

@@ -29,8 +29,11 @@ namespace AppControleGlicemia.Views
             txtQuantidadeOntem.Text = mediaOntem.Quantidade.ToString();
 
             var ultimaMedicao = dbDestro.RetornarUltimaAfericao();
-            txtUltimaData.Text = ultimaMedicao.DataAferido.ToString();
-            txtUltimaMedicao.Text = ultimaMedicao.ValorAferido.ToString();
+            if(ultimaMedicao != null)
+            {
+                txtUltimaData.Text = ultimaMedicao.DataAferido != null ? ultimaMedicao.DataAferido.ToString() : "";
+                txtUltimaMedicao.Text = ultimaMedicao.ValorAferido.ToString();
+            }
         }
 
         private void btInserirDestro_Clicked(object sender, EventArgs e)

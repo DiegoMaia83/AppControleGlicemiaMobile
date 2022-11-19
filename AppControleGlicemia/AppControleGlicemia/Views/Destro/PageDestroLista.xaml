@@ -15,7 +15,7 @@
                 </Picker.Items>
             </Picker>
 
-            <ListView x:Name="ListaDestro" HasUnevenRows="True">
+            <ListView x:Name="ListaDestro" HasUnevenRows="True" ItemSelected="ListaDestro_ItemSelected">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -24,6 +24,9 @@
                                     <Label Text="{Binding ValorAferido, StringFormat='{0:000}'}" TextColor="{StaticResource ColorSecondary}" FontSize="20" FontAttributes="Bold" VerticalOptions="CenterAndExpand" />
                                     <Label Text=" | " VerticalOptions="CenterAndExpand"/>
                                     <Label Text="{Binding DataAferido}" TextColor="{StaticResource ColorSecondary}" VerticalOptions="CenterAndExpand" />
+
+                                    <Image Source="{Binding Stats}" WidthRequest="15" VerticalOptions="CenterAndExpand" HorizontalOptions="EndAndExpand"/>
+
                                 </StackLayout>
                             </Frame>
                         </ViewCell>

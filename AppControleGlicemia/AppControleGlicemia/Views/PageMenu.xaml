@@ -9,33 +9,44 @@
 
             <StackLayout>
 
-                <StackLayout Orientation="Horizontal" Margin="0,5">
-                    <Label Text="{StaticResource IconHome}" TextColor="{StaticResource ColorLight}" FontFamily="FASolid" FontSize="Medium" />
-                    <Label Text="Home" TextColor="{StaticResource ColorLight}" FontSize="Medium">
-                        <Label.GestureRecognizers>
+                <StackLayout Margin="0,10,0,50">
+                    <Image Source="logo.png" WidthRequest="80" HorizontalOptions="CenterAndExpand"/>
+                    <Label Text="Controle de Glicemia" VerticalOptions="CenterAndExpand" TextColor="{StaticResource ColorLight}" FontSize="Medium" HorizontalOptions="CenterAndExpand"/>
+                </StackLayout>
+
+                <StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="{StaticResource IconHome}" TextColor="{StaticResource ColorLight}" FontFamily="FASolid" VerticalOptions="CenterAndExpand" />
+                        <Label Text="Home" TextColor="{StaticResource ColorLight}" FontSize="16" />
+                        <StackLayout.GestureRecognizers>
                             <TapGestureRecognizer x:Name="btHome" Tapped="btHome_Clicked" NumberOfTapsRequired="1"/>
-                        </Label.GestureRecognizers>
-                    </Label>                    
-                </StackLayout>                
+                        </StackLayout.GestureRecognizers>                        
+                    </StackLayout>
+                    <BoxView Color="{StaticResource ColorLight}" HeightRequest="0.2" HorizontalOptions="Fill" Margin="0,10" />
+                </StackLayout>
 
-                <StackLayout Orientation="Horizontal" Margin="0,5">
-                    <Label Text="{StaticResource IconDroplet}" TextColor="{StaticResource ColorLight}" FontFamily="FASolid" FontSize="Medium" />
-                    <Label Text="Medir destro" TextColor="{StaticResource ColorLight}"  FontSize="Medium">
-                        <Label.GestureRecognizers>
+                <StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="{StaticResource IconDroplet}" TextColor="{StaticResource ColorLight}" FontFamily="FASolid" VerticalOptions="CenterAndExpand" />
+                        <Label Text="Medir destro" TextColor="{StaticResource ColorLight}" FontSize="16" />
+                        <StackLayout.GestureRecognizers>
                             <TapGestureRecognizer x:Name="btDestroCadastro" Tapped="btDestroCadastro_Clicked" NumberOfTapsRequired="1"/>
-                        </Label.GestureRecognizers>
-                    </Label>
+                        </StackLayout.GestureRecognizers>
+                    </StackLayout>
+                    <BoxView Color="{StaticResource ColorLight}" HeightRequest="0.2" HorizontalOptions="Fill" Margin="0,10" />
                 </StackLayout>
 
-                <StackLayout Orientation="Horizontal" Margin="0,5">
-                    <Label Text="{StaticResource IconList}" TextColor="{StaticResource ColorLight}" FontFamily="FASolid" FontSize="Medium" />
-                    <Label Text="Listar destro" TextColor="{StaticResource ColorLight}" FontSize="Medium">
-                        <Label.GestureRecognizers>
+                <StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="{StaticResource IconList}" TextColor="{StaticResource ColorLight}" FontFamily="FASolid" VerticalOptions="CenterAndExpand" />
+                        <Label Text="Listar destro" TextColor="{StaticResource ColorLight}" FontSize="16" />
+                        <StackLayout.GestureRecognizers>
                             <TapGestureRecognizer x:Name="btDestroLista" Tapped="btDestroLista_Clicked" NumberOfTapsRequired="1"/>
-                        </Label.GestureRecognizers>                    
-                    </Label>                    
+                        </StackLayout.GestureRecognizers>
+                    </StackLayout>
+                    <BoxView Color="{StaticResource ColorLight}" HeightRequest="0.2" HorizontalOptions="Fill" Margin="0,10" />
                 </StackLayout>
-
+                
             </StackLayout>
             
         </ContentPage>
@@ -43,12 +54,8 @@
     </FlyoutPage.Flyout>
 
     <FlyoutPage.Detail>
-
         <ContentPage>
-
-
-        </ContentPage>
-        
+        </ContentPage>        
     </FlyoutPage.Detail>
 
 </FlyoutPage>

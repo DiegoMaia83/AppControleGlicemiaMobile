@@ -19,5 +19,8 @@ namespace AppControleGlicemia.Models
 
         [NotNull]
         public string Observacoes { get; set; }
+
+        [Ignore]
+        public string Stats { get; set; }
     }
 }
