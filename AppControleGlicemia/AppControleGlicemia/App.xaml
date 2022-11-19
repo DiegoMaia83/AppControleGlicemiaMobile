@@ -20,7 +20,7 @@
             <x:String x:Key="IconFingerPrint">&#xf577;</x:String>
             <x:String x:Key="IconPen">&#xf304;</x:String>
             <x:String x:Key="IconPointer">&#xf25a;</x:String>
-            <x:String x:Key="IconUp">&#xf0d8;</x:String>
+            <x:String x:Key="IconAbout">&#xf05a;</x:String>
             
         </ResourceDictionary>
 
