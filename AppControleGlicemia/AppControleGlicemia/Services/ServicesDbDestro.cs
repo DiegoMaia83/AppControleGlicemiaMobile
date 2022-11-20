@@ -25,6 +25,9 @@ namespace AppControleGlicemia.Services
         {
             try
             {
+                if (destro.DataAferido > DateTime.Now)
+                    throw new Exception("Não é possível inserir uma data futura");
+
                 int result = conn.Insert(destro);
 
                 if (result > 0)
@@ -123,15 +126,24 @@ namespace AppControleGlicemia.Services
                 var i = 0;
 
                 foreach (var item in resp)
-                {                    
+                {
                     var destro = new ModelDestro();
                     destro = item;
                     destro.Stats = destro.ValorAferido > i ? "IconUp" : destro.ValorAferido < i ? "IconDown" : "IconEqual";
 
+                    if (String.IsNullOrEmpty(item.InsulinaTipo))
+                    {
+                        item.MostraInsulina = false;
+                    }
+                    else
+                    {
+                        item.MostraInsulina = true;
+                    }
+
                     i = item.ValorAferido;
 
                     lista.Add(destro);
-                }                
+                }
 
                 return lista;
             }

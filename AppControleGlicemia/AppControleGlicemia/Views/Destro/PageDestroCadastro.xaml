@@ -2,12 +2,14 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppControleGlicemia.Views.Destro.PageDestroCadastro"
+             xmlns:effects="clr-namespace:PlainEntryAndroidSample.Effects"
              Title="Medir destro">
     <ContentPage.Content>
 
         <Grid BackgroundColor="{StaticResource ColorLight}">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="*" />
@@ -20,9 +22,8 @@
 
             <StackLayout Grid.Row="0" Grid.ColumnSpan="2">
                 <Entry x:Name="txtDestroId" Text="{Binding DestroId}" IsVisible="false"/>
-                <Entry x:Name="txtDataAferido" Text="{Binding DataAferido}" IsVisible="false"/>
             </StackLayout>
-           
+
 
             <StackLayout Grid.Row="1" Grid.ColumnSpan="2" Orientation="Horizontal">
                 <Button Text="-" TextColor="{StaticResource ColorLight}" 
@@ -31,13 +32,13 @@
                         CornerRadius="25" WidthRequest="50" HeightRequest="50" 
                         VerticalOptions="CenterAndExpand" 
                         Clicked="BtAtualizaValor"/>
-                
-                <Entry x:Name="txtValorAferido" Text="0" FontAttributes="Bold"
+
+                <Entry x:Name="txtValorAferido" Text="0" FontAttributes="Bold" 
                        TextColor="{StaticResource ColorPrimary}" 
                        Keyboard="Numeric" 
                        HorizontalOptions="CenterAndExpand" 
                        FontSize="70" WidthRequest="150" MaxLength="3"
-                       HorizontalTextAlignment="Center"/>
+                       HorizontalTextAlignment="Center" />
 
                 <Button Text="+" TextColor="{StaticResource ColorLight}" 
                         BackgroundColor="{StaticResource ColorSecondary}"
@@ -47,11 +48,32 @@
                         Clicked="BtAtualizaValor"/>         
             </StackLayout>
 
-            <StackLayout Grid.Row="2" Grid.ColumnSpan="2" HorizontalOptions="Center">
-                <Label x:Name="txtUltimaAfericao" />
+            <StackLayout Grid.Row="2" Grid.ColumnSpan="2" HorizontalOptions="Center">                
+                <StackLayout Orientation="Horizontal">
+                    <StackLayout HorizontalOptions="StartAndExpand">
+                        <Label Text="Dia" />
+                        <DatePicker x:Name="txtData" />                        
+                    </StackLayout>
+                    <StackLayout HorizontalOptions="StartAndExpand">
+                        <Label Text="Hora"/>
+                        <TimePicker x:Name="txtHora"/>
+                    </StackLayout>         
+                </StackLayout>
             </StackLayout>
 
-            <StackLayout x:Name="gridBtAlterar" Grid.Row="3" Grid.ColumnSpan="2" IsVisible="false" Orientation="Horizontal" VerticalOptions="EndAndExpand">
+            <StackLayout Grid.Row="3" Grid.ColumnSpan="2" Orientation="Horizontal">
+                <Picker x:Name="pckInsulina" HorizontalOptions="EndAndExpand"
+                        Title="Selecione o período" FontSize="16">
+                    <Picker.Items>
+                        <x:String>NPH</x:String>
+                        <x:String>Lispro</x:String>
+                        <x:String>Tresiba</x:String>
+                    </Picker.Items>
+                </Picker>
+                <Entry Text="0" x:Name="qtdInsulina" HorizontalOptions="StartAndExpand"/>
+            </StackLayout>
+
+            <StackLayout x:Name="gridBtAlterar" Grid.Row="4" Grid.ColumnSpan="2" IsVisible="false" Orientation="Horizontal" VerticalOptions="EndAndExpand">
                 <Button x:Name="btAlterar" 
                         Text="Alterar" 
                         TextColor="{StaticResource ColorLight}" 
@@ -68,7 +90,7 @@
                         Clicked="btExcluir_Clicked"/>
             </StackLayout>
 
-            <StackLayout x:Name="gridBtInserir" Grid.Row="3" Grid.ColumnSpan="2" IsVisible="true">
+            <StackLayout x:Name="gridBtInserir" Grid.Row="4" Grid.ColumnSpan="2" IsVisible="true">
                 <Button x:Name="btInserir" 
                         Text="Inserir" 
                         TextColor="{StaticResource ColorLight}" 

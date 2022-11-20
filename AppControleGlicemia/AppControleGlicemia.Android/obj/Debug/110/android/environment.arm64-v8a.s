@@ -3,8 +3,8 @@
 	.section	.rodata.env.str.1,"aMS",@progbits,1
 	.type	.L.env.str.1, @object
 .L.env.str.1:
-	.asciz	"com.companyname.appcontroleglicemia"
-	.size	.L.env.str.1, 36
+	.asciz	"br.com.devmaia.appcontroleglicemia"
+	.size	.L.env.str.1, 35
 	.section	.data.application_config,"aw",@progbits
 	.type	application_config, @object
 	.p2align	3
@@ -73,7 +73,7 @@ mono_aot_mode_name:
 	.section	.rodata.env.str.8,"aMS",@progbits,1
 	.type	.L.env.str.8, @object
 .L.env.str.8:
-	.asciz	"bee59262-841f-4a8c-acb0-ef82c181e928"
+	.asciz	"f8c30d33-bb16-4f00-8cc3-187d24e874ba"
 	.size	.L.env.str.8, 37
 	.section	.rodata.env.str.9,"aMS",@progbits,1
 	.type	.L.env.str.9, @object

@@ -23,7 +23,21 @@
                                 <StackLayout Orientation="Horizontal">
                                     <Label Text="{Binding ValorAferido, StringFormat='{0:000}'}" TextColor="{StaticResource ColorSecondary}" FontSize="20" FontAttributes="Bold" VerticalOptions="CenterAndExpand" />
                                     <Label Text=" | " VerticalOptions="CenterAndExpand"/>
-                                    <Label Text="{Binding DataAferido}" TextColor="{StaticResource ColorSecondary}" VerticalOptions="CenterAndExpand" />
+                                    <Label Text="{Binding DataAferido, StringFormat='{0:dd/MM/yyyy}'}" TextColor="{StaticResource ColorSecondary}" VerticalOptions="CenterAndExpand" />
+                                    <Label Text="{Binding DataAferido, StringFormat='{0:HH:mm}'}" TextColor="{StaticResource ColorSecondary}" VerticalOptions="CenterAndExpand" />
+
+                                    <StackLayout HorizontalOptions="CenterAndExpand">
+                                        <Frame x:Name="frameInsulina" Padding="5" HasShadow="False" IsVisible="{Binding MostraInsulina}" BackgroundColor="{StaticResource ColorPrimary}">
+                                            <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+                                                <Label Text="{StaticResource IconDroplet}" 
+                                                       FontSize="12" TextColor="{StaticResource ColorSecondaryLight}" FontFamily="FASolid" VerticalOptions="Center" />
+                                                <Label Text="{Binding InsulinaTipo}" 
+                                                       FontSize="12" TextColor="{StaticResource ColorSecondaryLight}"/>
+                                                <Label Text="{Binding InsulinaQuantidade, StringFormat='{0} '}" 
+                                                       FontSize="12" FontAttributes="Bold" TextColor="{StaticResource ColorSecondaryLight}" />
+                                            </StackLayout>                                       
+                                        </Frame>                                       
+                                    </StackLayout>
 
                                     <Image Source="{Binding Stats}" WidthRequest="15" VerticalOptions="CenterAndExpand" HorizontalOptions="EndAndExpand"/>
 

@@ -1,11 +1,3 @@
-D:\Desenvolvimento\Xamarin\Projeto\AppControleGlicemia\AppControleGlicemia\AppControleGlicemia.iOS\obj\iPhone\Debug\actool\_PartialAppManifest.items
-D:\Desenvolvimento\Xamarin\Projeto\AppControleGlicemia\AppControleGlicemia\AppControleGlicemia.iOS\obj\iPhone\Debug\actool\_BundleResourceWithLogicalName.items
-D:\Desenvolvimento\Xamarin\Projeto\AppControleGlicemia\AppControleGlicemia\AppControleGlicemia.iOS\obj\iPhone\Debug\ibtool\_BundleResourceWithLogicalName.items
-D:\Desenvolvimento\Xamarin\Projeto\AppControleGlicemia\AppControleGlicemia\AppControleGlicemia.iOS\obj\iPhone\Debug\coremlc\_PartialAppManifest.items
-D:\Desenvolvimento\Xamarin\Projeto\AppControleGlicemia\AppControleGlicemia\AppControleGlicemia.iOS\obj\iPhone\Debug\coremlc\_BundleResourceWithLogicalName.items
-D:\Desenvolvimento\Xamarin\Projeto\AppControleGlicemia\AppControleGlicemia\AppControleGlicemia.iOS\obj\iPhone\Debug\optimized\
-D:\Desenvolvimento\Xamarin\Projeto\AppControleGlicemia\AppControleGlicemia\AppControleGlicemia.iOS\obj\iPhone\Debug\AppControleGlicemia.iOS.csproj.AssemblyReference.cache
-D:\Desenvolvimento\Xamarin\Projeto\AppControleGlicemia\AppControleGlicemia\AppControleGlicemia.iOS\obj\iPhone\Debug\AppControleGlicemia.iOS.csproj.CoreCompileInputs.cache
 D:\Desenvolvimento\Xamarin\Projeto\AppControleGlicemia\AppControleGlicemia\AppControleGlicemia.iOS\bin\iPhone\Debug\AppControleGlicemia.iOS.exe
 D:\Desenvolvimento\Xamarin\Projeto\AppControleGlicemia\AppControleGlicemia\AppControleGlicemia.iOS\bin\iPhone\Debug\AppControleGlicemia.iOS.pdb
 D:\Desenvolvimento\Xamarin\Projeto\AppControleGlicemia\AppControleGlicemia\AppControleGlicemia.iOS\bin\iPhone\Debug\SQLite-net.dll
@@ -61,6 +53,14 @@ D:\Desenvolvimento\Xamarin\Projeto\AppControleGlicemia\AppControleGlicemia\AppCo
 D:\Desenvolvimento\Xamarin\Projeto\AppControleGlicemia\AppControleGlicemia\AppControleGlicemia.iOS\bin\iPhone\Debug\zh-Hant\Xamarin.Forms.Platform.iOS.resources.dll
 D:\Desenvolvimento\Xamarin\Projeto\AppControleGlicemia\AppControleGlicemia\AppControleGlicemia.iOS\bin\iPhone\Debug\AppControleGlicemia.dll
 D:\Desenvolvimento\Xamarin\Projeto\AppControleGlicemia\AppControleGlicemia\AppControleGlicemia.iOS\bin\iPhone\Debug\AppControleGlicemia.pdb
+D:\Desenvolvimento\Xamarin\Projeto\AppControleGlicemia\AppControleGlicemia\AppControleGlicemia.iOS\obj\iPhone\Debug\actool\_PartialAppManifest.items
+D:\Desenvolvimento\Xamarin\Projeto\AppControleGlicemia\AppControleGlicemia\AppControleGlicemia.iOS\obj\iPhone\Debug\actool\_BundleResourceWithLogicalName.items
+D:\Desenvolvimento\Xamarin\Projeto\AppControleGlicemia\AppControleGlicemia\AppControleGlicemia.iOS\obj\iPhone\Debug\ibtool\_BundleResourceWithLogicalName.items
+D:\Desenvolvimento\Xamarin\Projeto\AppControleGlicemia\AppControleGlicemia\AppControleGlicemia.iOS\obj\iPhone\Debug\coremlc\_PartialAppManifest.items
+D:\Desenvolvimento\Xamarin\Projeto\AppControleGlicemia\AppControleGlicemia\AppControleGlicemia.iOS\obj\iPhone\Debug\coremlc\_BundleResourceWithLogicalName.items
+D:\Desenvolvimento\Xamarin\Projeto\AppControleGlicemia\AppControleGlicemia\AppControleGlicemia.iOS\obj\iPhone\Debug\optimized\
+D:\Desenvolvimento\Xamarin\Projeto\AppControleGlicemia\AppControleGlicemia\AppControleGlicemia.iOS\obj\iPhone\Debug\AppControleGlicemia.iOS.csproj.AssemblyReference.cache
+D:\Desenvolvimento\Xamarin\Projeto\AppControleGlicemia\AppControleGlicemia\AppControleGlicemia.iOS\obj\iPhone\Debug\AppControleGlicemia.iOS.csproj.CoreCompileInputs.cache
 D:\Desenvolvimento\Xamarin\Projeto\AppControleGlicemia\AppControleGlicemia\AppControleGlicemia.iOS\obj\iPhone\Debug\AppControleGlicemia.iOS.csproj.CopyComplete
 D:\Desenvolvimento\Xamarin\Projeto\AppControleGlicemia\AppControleGlicemia\AppControleGlicemia.iOS\obj\iPhone\Debug\AppControleGlicemia.iOS.exe
 D:\Desenvolvimento\Xamarin\Projeto\AppControleGlicemia\AppControleGlicemia\AppControleGlicemia.iOS\obj\iPhone\Debug\AppControleGlicemia.iOS.pdb

@@ -18,6 +18,11 @@ namespace AppControleGlicemia.Views.Destro
         {
             InitializeComponent();
 
+            // Popula os campos data e hora com o horário atual
+            DateTime now = DateTime.Now;
+            txtData.Date = now.Date;
+            txtHora.Time = new TimeSpan(now.Hour, now.Minute, now.Second);
+
             RetornarUltimaAfericao();
         }
 
@@ -25,28 +30,36 @@ namespace AppControleGlicemia.Views.Destro
         {
             InitializeComponent();
 
+            // Popula os campos data e hora com o horário que retorna da tabela
+            DateTime now = destro.DataAferido;
+            txtData.Date = now.Date;
+            txtHora.Time = new TimeSpan(now.Hour, now.Minute, now.Second);
+
             gridBtAlterar.IsVisible = true;
             gridBtInserir.IsVisible = false;
 
-            //RetornarUltimaAfericao();
-
             txtDestroId.Text = destro.DestroId.ToString();
             txtValorAferido.Text = destro.ValorAferido.ToString();
-            txtDataAferido.Text = destro.DataAferido.ToString();
-            txtUltimaAfericao.Text = String.Format("Valor aferido em {0}", destro.DataAferido.ToString());
-
+            pckInsulina.SelectedItem = destro.InsulinaTipo;
+            qtdInsulina.Text = destro.InsulinaQuantidade.ToString();
         }
 
         private void btInserir_Clicked(object sender, EventArgs e)
         {
             try
             {
-                var destro = new ModelDestro()
-                {
-                    ValorAferido = Convert.ToInt32(txtValorAferido.Text),
-                    DataAferido = DateTime.Now,
-                    Observacoes = ""
-                };
+                // Agrupa a data e hora selecionada em um DateTime
+                var date = txtData.Date;
+                var hour = txtHora.Time;
+                DateTime datetime = date + hour;
+
+                var destro = new ModelDestro();
+                destro.ValorAferido = Convert.ToInt32(txtValorAferido.Text);
+                destro.DataAferido = datetime;
+                destro.InsulinaTipo = pckInsulina.SelectedItem != null ? pckInsulina.SelectedItem.ToString() : "";
+                destro.InsulinaQuantidade = Convert.ToInt32(qtdInsulina.Text);
+                destro.Observacoes = "";
+
 
                 ServicesDbDestro dbDestro = new ServicesDbDestro(App.DbPath);
 
@@ -55,7 +68,7 @@ namespace AppControleGlicemia.Views.Destro
                 DisplayAlert("Resultado da operação", dbDestro.StatusMessage, "OK");
 
                 FlyoutPage page = (FlyoutPage)Application.Current.MainPage;
-                page.Detail = new NavigationPage(new PageHome());
+                page.Detail = new NavigationPage(new PageDestroLista());
             }
             catch (Exception ex)
             {
@@ -102,9 +115,6 @@ namespace AppControleGlicemia.Views.Destro
             if (destro != null)
             {
                 txtValorAferido.Text = destro.ValorAferido.ToString();
-                txtUltimaAfericao.Text = String.Format("Última aferição {0} feita em {1}",
-                    destro.ValorAferido.ToString(),
-                    destro.DataAferido.ToString());
             }
         }
 
@@ -112,11 +122,20 @@ namespace AppControleGlicemia.Views.Destro
         {
             try
             {
-                var destro = new ModelDestro();
-                destro.DestroId = Convert.ToInt32(txtDestroId.Text);
-                destro.ValorAferido = Convert.ToInt32(txtValorAferido.Text);
-                destro.DataAferido = Convert.ToDateTime(txtDataAferido.Text);
-                destro.Observacoes = "";
+                // Agrupa a data e hora selecionada em um DateTime
+                var date = txtData.Date;
+                var hour = txtHora.Time;
+                DateTime datetime = date + hour;
+
+                var destro = new ModelDestro()
+                {
+                    DestroId = Convert.ToInt32(txtDestroId.Text),
+                    ValorAferido = Convert.ToInt32(txtValorAferido.Text),
+                    DataAferido = datetime,
+                    InsulinaTipo = pckInsulina.SelectedItem.ToString(),
+                    InsulinaQuantidade = Convert.ToInt32(qtdInsulina.Text),
+                    Observacoes = ""
+                };
 
                 ServicesDbDestro dbDestro = new ServicesDbDestro(App.DbPath);
 
@@ -125,7 +144,7 @@ namespace AppControleGlicemia.Views.Destro
                 DisplayAlert("Resultado da operação", dbDestro.StatusMessage, "OK");
 
                 FlyoutPage page = (FlyoutPage)Application.Current.MainPage;
-                page.Detail = new NavigationPage(new PageHome());
+                page.Detail = new NavigationPage(new PageDestroLista());
             }
             catch (Exception ex)
             {

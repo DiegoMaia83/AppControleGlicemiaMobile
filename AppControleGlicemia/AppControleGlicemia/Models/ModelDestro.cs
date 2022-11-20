@@ -17,10 +17,16 @@ namespace AppControleGlicemia.Models
         [NotNull]
         public DateTime DataAferido { get; set; }
 
+        public string InsulinaTipo { get; set; }
+
+        public int InsulinaQuantidade { get; set; }
+
         [NotNull]
         public string Observacoes { get; set; }
 
         [Ignore]
         public string Stats { get; set; }
+        [Ignore]
+        public bool MostraInsulina { get; set; }
     }
 }

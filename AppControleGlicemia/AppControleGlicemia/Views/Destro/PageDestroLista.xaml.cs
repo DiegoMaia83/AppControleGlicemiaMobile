@@ -25,7 +25,9 @@ namespace AppControleGlicemia.Views.Destro
         {
             ServicesDbDestro dbDestro = new ServicesDbDestro(App.DbPath);
 
-            ListaDestro.ItemsSource = dbDestro.Listar(idxPeriodo).OrderByDescending(x => x.DataAferido);
+            var lista = dbDestro.Listar(idxPeriodo).OrderByDescending(x => x.DataAferido).ToList();
+
+            ListaDestro.ItemsSource = lista;
         }
 
         private void pckPeriodo_SelectedIndexChanged(object sender, EventArgs e)
