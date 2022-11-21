@@ -21,6 +21,8 @@
             <x:String x:Key="IconPen">&#xf304;</x:String>
             <x:String x:Key="IconPointer">&#xf25a;</x:String>
             <x:String x:Key="IconAbout">&#xf05a;</x:String>
+            <x:String x:Key="IconTrash">&#xf1f8;</x:String>
+            <x:String x:Key="IconConfig">&#xf013;</x:String>
             
         </ResourceDictionary>
 

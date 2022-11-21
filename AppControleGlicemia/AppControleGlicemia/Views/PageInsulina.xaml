@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppControleGlicemia.Views.PageInsulina"
+             Title="Tipos de insulina">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="{StaticResource ColorLight}" Padding="20">
+
+            <StackLayout Orientation="Horizontal">
+                <Entry x:Name="txtTipoInsulina" Placeholder="Informe o tipo de insulina" HorizontalOptions="FillAndExpand" />
+                <Button x:Name="btSalvar" Text="Inserir" 
+                        BackgroundColor="{StaticResource ColorPrimary}" 
+                        TextColor="{StaticResource ColorSecondaryLight}"
+                        Clicked="btSalvar_Clicked" />               
+            </StackLayout>
+
+
+            <ListView x:Name="ListaInsulina" HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame Padding="20,8,30,8" HasShadow="False" BackgroundColor="{StaticResource ColorSecondaryLight}" Margin="0,10,0,0">
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding Tipo}" FontSize="16" HorizontalOptions="StartAndExpand"/>
+                                    <Label Text="{StaticResource IconTrash}" FontFamily="FASolid" TextColor="{StaticResource ColorDanger}">
+                                        <Label.GestureRecognizers>
+                                            <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="btExcluir_Clicked" />
+                                        </Label.GestureRecognizers>
+                                    </Label>
+                                </StackLayout>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

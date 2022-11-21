@@ -44,5 +44,11 @@ namespace AppControleGlicemia.Views
             this.Detail = new NavigationPage(new PageSobre());
             IsPresented = false;
         }
+
+        private void btInsulinaTipo_Tapped(object sender, EventArgs e)
+        {
+            this.Detail = new NavigationPage(new PageInsulina());
+            IsPresented = false;
+        }
     }
 }

@@ -23,6 +23,9 @@ namespace AppControleGlicemia.Views.Destro
             txtData.Date = now.Date;
             txtHora.Time = new TimeSpan(now.Hour, now.Minute, now.Second);
 
+            // Preenche o picker com os tipos de insulina
+            PopularPickerInsulina();
+
             RetornarUltimaAfericao();
         }
 
@@ -42,6 +45,9 @@ namespace AppControleGlicemia.Views.Destro
             txtValorAferido.Text = destro.ValorAferido.ToString();
             pckInsulina.SelectedItem = destro.InsulinaTipo;
             qtdInsulina.Text = destro.InsulinaQuantidade.ToString();
+
+            // Preenche o picker com os tipos de insulina
+            PopularPickerInsulina();
         }
 
         private void btInserir_Clicked(object sender, EventArgs e)
@@ -132,7 +138,7 @@ namespace AppControleGlicemia.Views.Destro
                     DestroId = Convert.ToInt32(txtDestroId.Text),
                     ValorAferido = Convert.ToInt32(txtValorAferido.Text),
                     DataAferido = datetime,
-                    InsulinaTipo = pckInsulina.SelectedItem.ToString(),
+                    InsulinaTipo = pckInsulina.SelectedItem != null ? pckInsulina.SelectedItem.ToString() : "",
                     InsulinaQuantidade = Convert.ToInt32(qtdInsulina.Text),
                     Observacoes = ""
                 };
@@ -166,6 +172,31 @@ namespace AppControleGlicemia.Views.Destro
                 FlyoutPage page = (FlyoutPage)Application.Current.MainPage;
                 page.Detail = new NavigationPage(new PageHome());
             }
+        }
+
+        public void PopularPickerInsulina()
+        {
+            ServicesDbInsulina dbInsulina = new ServicesDbInsulina(App.DbPath);
+
+            var lista = dbInsulina.Listar();
+
+            foreach (var item in lista)
+            {
+                pckInsulina.Items.Add(item.Tipo);
+            }
+
+            pckInsulina.Items.Add("Adicionar novo");
+        }
+
+        private void pckInsulina_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var pck = (Picker)sender;
+
+            if (pck.SelectedItem.ToString() == "Adicionar novo")
+            {
+                FlyoutPage page = (FlyoutPage)Application.Current.MainPage;
+                page.Detail = new NavigationPage(new PageInsulina());
+            };
         }
     }
 }

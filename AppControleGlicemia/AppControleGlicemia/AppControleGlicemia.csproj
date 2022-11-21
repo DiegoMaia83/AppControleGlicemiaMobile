@@ -11,6 +11,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Effects\**" />
+    <EmbeddedResource Remove="Effects\**" />
+    <None Remove="Effects\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="fonts\fa-regular-400.ttf" />
     <None Remove="fonts\fa-solid-900.ttf" />
   </ItemGroup>
@@ -42,12 +48,11 @@
     <EmbeddedResource Update="Views\PageHome.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="Views\PageInsulina.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Views\PageSobre.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Effects\" />
   </ItemGroup>
 </Project>

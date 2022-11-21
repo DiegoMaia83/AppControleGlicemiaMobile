@@ -8,11 +8,10 @@
 
         <Grid BackgroundColor="{StaticResource ColorLight}">
             <Grid.RowDefinitions>
-                <RowDefinition Height="*" />
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
 
             <Grid.ColumnDefinitions>
@@ -21,7 +20,7 @@
             </Grid.ColumnDefinitions>
 
             <StackLayout Grid.Row="0" Grid.ColumnSpan="2">
-                <Entry x:Name="txtDestroId" Text="{Binding DestroId}" IsVisible="false"/>
+                <Entry x:Name="txtDestroId" Text="{Binding DestroId}" IsVisible="false" />
             </StackLayout>
 
 
@@ -48,32 +47,40 @@
                         Clicked="BtAtualizaValor"/>         
             </StackLayout>
 
-            <StackLayout Grid.Row="2" Grid.ColumnSpan="2" HorizontalOptions="Center">                
-                <StackLayout Orientation="Horizontal">
-                    <StackLayout HorizontalOptions="StartAndExpand">
-                        <Label Text="Dia" />
-                        <DatePicker x:Name="txtData" />                        
+            <StackLayout Grid.Row="2" Grid.ColumnSpan="2" HorizontalOptions="FillAndExpand" Padding="30,0,30,0">
+
+                <Frame Padding="10,3,10,3" HasShadow="False" BackgroundColor="{StaticResource ColorSecondaryLight}" Margin="0,3,0,0">
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Dia:" VerticalOptions="CenterAndExpand"  />
+                        <DatePicker x:Name="txtData" VerticalOptions="CenterAndExpand" />
                     </StackLayout>
-                    <StackLayout HorizontalOptions="StartAndExpand">
-                        <Label Text="Hora"/>
-                        <TimePicker x:Name="txtHora"/>
-                    </StackLayout>         
-                </StackLayout>
+                </Frame>
+                <Frame Padding="10,3,10,3" HasShadow="False" BackgroundColor="{StaticResource ColorSecondaryLight}" Margin="0,3,0,0">
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Hora" VerticalOptions="CenterAndExpand" />
+                            <TimePicker x:Name="txtHora" VerticalOptions="CenterAndExpand" />
+                        </StackLayout>
+                    </Frame>
+                <Frame Padding="10,3,10,3" HasShadow="False" BackgroundColor="{StaticResource ColorSecondaryLight}" Margin="0,3,0,0">
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Insulina:" VerticalOptions="CenterAndExpand"  />
+                            <Picker x:Name="pckInsulina" VerticalOptions="CenterAndExpand" 
+                                    Title="Selecione o período" FontSize="16" SelectedIndexChanged="pckInsulina_SelectedIndexChanged">
+                                <Picker.Items>
+                                </Picker.Items>
+                            </Picker>
+                        </StackLayout>
+                    </Frame>
+                    <Frame Padding="10,3,10,3" HasShadow="False" BackgroundColor="{StaticResource ColorSecondaryLight}" Margin="0,3,0,0">
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Quantidade:" VerticalOptions="CenterAndExpand" />
+                            <Entry Text="0" x:Name="qtdInsulina" Keyboard="Numeric" VerticalOptions="CenterAndExpand" />
+                        </StackLayout>
+                    </Frame>
+
             </StackLayout>
 
-            <StackLayout Grid.Row="3" Grid.ColumnSpan="2" Orientation="Horizontal">
-                <Picker x:Name="pckInsulina" HorizontalOptions="EndAndExpand"
-                        Title="Selecione o período" FontSize="16">
-                    <Picker.Items>
-                        <x:String>NPH</x:String>
-                        <x:String>Lispro</x:String>
-                        <x:String>Tresiba</x:String>
-                    </Picker.Items>
-                </Picker>
-                <Entry Text="0" x:Name="qtdInsulina" HorizontalOptions="StartAndExpand"/>
-            </StackLayout>
-
-            <StackLayout x:Name="gridBtAlterar" Grid.Row="4" Grid.ColumnSpan="2" IsVisible="false" Orientation="Horizontal" VerticalOptions="EndAndExpand">
+            <StackLayout x:Name="gridBtAlterar" Grid.Row="3" Grid.ColumnSpan="2" IsVisible="false" Orientation="Horizontal" VerticalOptions="EndAndExpand">
                 <Button x:Name="btAlterar" 
                         Text="Alterar" 
                         TextColor="{StaticResource ColorLight}" 
@@ -90,7 +97,7 @@
                         Clicked="btExcluir_Clicked"/>
             </StackLayout>
 
-            <StackLayout x:Name="gridBtInserir" Grid.Row="4" Grid.ColumnSpan="2" IsVisible="true">
+            <StackLayout x:Name="gridBtInserir" Grid.Row="3" Grid.ColumnSpan="2" IsVisible="true">
                 <Button x:Name="btInserir" 
                         Text="Inserir" 
                         TextColor="{StaticResource ColorLight}" 
