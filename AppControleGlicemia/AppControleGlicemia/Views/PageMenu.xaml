@@ -10,7 +10,7 @@
             <StackLayout>
 
                 <StackLayout Margin="0,10,0,50">
-                    <Image Source="logo.png" WidthRequest="80" HorizontalOptions="CenterAndExpand"/>
+                    <Image Source="Icon.png" WidthRequest="80" HorizontalOptions="CenterAndExpand"/>
                     <Label Text="Controle de Glicemia" VerticalOptions="CenterAndExpand" TextColor="{StaticResource ColorLight}" FontSize="Medium" HorizontalOptions="CenterAndExpand"/>
                 </StackLayout>
 

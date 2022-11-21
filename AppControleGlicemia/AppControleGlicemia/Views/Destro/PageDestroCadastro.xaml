@@ -51,21 +51,25 @@
 
                 <Frame Padding="10,3,10,3" HasShadow="False" BackgroundColor="{StaticResource ColorSecondaryLight}" Margin="0,3,0,0">
                     <StackLayout Orientation="Horizontal">
-                        <Label Text="Dia:" VerticalOptions="CenterAndExpand"  />
-                        <DatePicker x:Name="txtData" VerticalOptions="CenterAndExpand" />
+                        <Label Text="Dia:" VerticalOptions="CenterAndExpand" />
+                        <DatePicker x:Name="txtData" TextColor="{StaticResource ColorSecondary}" FontAttributes="Bold"
+                                    VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" />
                     </StackLayout>
                 </Frame>
                 <Frame Padding="10,3,10,3" HasShadow="False" BackgroundColor="{StaticResource ColorSecondaryLight}" Margin="0,3,0,0">
                         <StackLayout Orientation="Horizontal">
                             <Label Text="Hora" VerticalOptions="CenterAndExpand" />
-                            <TimePicker x:Name="txtHora" VerticalOptions="CenterAndExpand" />
+                            <TimePicker x:Name="txtHora" TextColor="{StaticResource ColorSecondary}" FontAttributes="Bold"
+                                        VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" />
                         </StackLayout>
                     </Frame>
                 <Frame Padding="10,3,10,3" HasShadow="False" BackgroundColor="{StaticResource ColorSecondaryLight}" Margin="0,3,0,0">
                         <StackLayout Orientation="Horizontal">
                             <Label Text="Insulina:" VerticalOptions="CenterAndExpand"  />
                             <Picker x:Name="pckInsulina" VerticalOptions="CenterAndExpand" 
-                                    Title="Selecione o período" FontSize="16" SelectedIndexChanged="pckInsulina_SelectedIndexChanged">
+                                    TextColor="{StaticResource ColorSecondary}" FontAttributes="Bold"
+                                    Title="Selecione o período" FontSize="16" HorizontalOptions="FillAndExpand"
+                                    SelectedIndexChanged="pckInsulina_SelectedIndexChanged">
                                 <Picker.Items>
                                 </Picker.Items>
                             </Picker>
@@ -74,7 +78,9 @@
                     <Frame Padding="10,3,10,3" HasShadow="False" BackgroundColor="{StaticResource ColorSecondaryLight}" Margin="0,3,0,0">
                         <StackLayout Orientation="Horizontal">
                             <Label Text="Quantidade:" VerticalOptions="CenterAndExpand" />
-                            <Entry Text="0" x:Name="qtdInsulina" Keyboard="Numeric" VerticalOptions="CenterAndExpand" />
+                            <Entry Text="0" x:Name="qtdInsulina" Keyboard="Numeric" 
+                                   TextColor="{StaticResource ColorSecondary}" FontAttributes="Bold"
+                                   VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" />
                         </StackLayout>
                     </Frame>
 

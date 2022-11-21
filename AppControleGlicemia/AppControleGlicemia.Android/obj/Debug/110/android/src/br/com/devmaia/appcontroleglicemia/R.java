@@ -6493,10 +6493,10 @@ public final class R {
     public static final int ic_mtrl_chip_checked_black=0x7f07006d;
     public static final int ic_mtrl_chip_checked_circle=0x7f07006e;
     public static final int ic_mtrl_chip_close_circle=0x7f07006f;
-    public static final int icondown=0x7f070070;
-    public static final int iconequal=0x7f070071;
-    public static final int iconup=0x7f070072;
-    public static final int logo=0x7f070073;
+    public static final int icon=0x7f070070;
+    public static final int icondown=0x7f070071;
+    public static final int iconequal=0x7f070072;
+    public static final int iconup=0x7f070073;
     public static final int material_ic_calendar_black_24dp=0x7f070074;
     public static final int material_ic_clear_black_24dp=0x7f070075;
     public static final int material_ic_edit_black_24dp=0x7f070076;

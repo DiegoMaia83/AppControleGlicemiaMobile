@@ -55,7 +55,6 @@ D:\Desenvolvimento\Xamarin\Projeto\AppControleGlicemia\AppControleGlicemia\AppCo
 D:\Desenvolvimento\Xamarin\Projeto\AppControleGlicemia\AppControleGlicemia\AppControleGlicemia.Android\obj\Debug\110\res\mipmap-xxxhdpi\icon.png
 D:\Desenvolvimento\Xamarin\Projeto\AppControleGlicemia\AppControleGlicemia\AppControleGlicemia.Android\obj\Debug\110\res\mipmap-xxxhdpi\launcher_foreground.png
 D:\Desenvolvimento\Xamarin\Projeto\AppControleGlicemia\AppControleGlicemia\AppControleGlicemia.Android\obj\Debug\110\res\drawable\icondown.png
-D:\Desenvolvimento\Xamarin\Projeto\AppControleGlicemia\AppControleGlicemia\AppControleGlicemia.Android\obj\Debug\110\res\drawable\logo.png
 D:\Desenvolvimento\Xamarin\Projeto\AppControleGlicemia\AppControleGlicemia\AppControleGlicemia.Android\obj\Debug\110\res\drawable\iconup.png
 D:\Desenvolvimento\Xamarin\Projeto\AppControleGlicemia\AppControleGlicemia\AppControleGlicemia.Android\obj\Debug\110\res\drawable\iconequal.png
 D:\Desenvolvimento\Xamarin\Projeto\AppControleGlicemia\AppControleGlicemia\AppControleGlicemia.Android\obj\Debug\110\uploadflags.txt
@@ -586,3 +585,4 @@ D:\Desenvolvimento\Xamarin\Projeto\AppControleGlicemia\AppControleGlicemia\AppCo
 D:\Desenvolvimento\Xamarin\Projeto\AppControleGlicemia\AppControleGlicemia\AppControleGlicemia.Android\obj\Debug\110\stamp\_GenerateJavaStubs.stamp
 D:\Desenvolvimento\Xamarin\Projeto\AppControleGlicemia\AppControleGlicemia\AppControleGlicemia.Android\obj\Debug\110\stamp\_GeneratePackageManagerJava.stamp
 D:\Desenvolvimento\Xamarin\Projeto\AppControleGlicemia\AppControleGlicemia\AppControleGlicemia.Android\obj\Debug\110\stamp\_ResolveLibraryProjectImports.stamp
+D:\Desenvolvimento\Xamarin\Projeto\AppControleGlicemia\AppControleGlicemia\AppControleGlicemia.Android\obj\Debug\110\res\drawable\icon.png
