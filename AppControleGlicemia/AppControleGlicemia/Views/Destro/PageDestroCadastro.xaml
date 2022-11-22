@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="AppControleGlicemia.Views.Destro.PageDestroCadastro"
-             xmlns:effects="clr-namespace:PlainEntryAndroidSample.Effects"
+             xmlns:local="clr-namespace:AppControleGlicemia.Custom"
+             x:Class="AppControleGlicemia.Views.Destro.PageDestroCadastro"             
              Title="Medir destro">
     <ContentPage.Content>
 
@@ -32,7 +32,7 @@
                         VerticalOptions="CenterAndExpand" 
                         Clicked="BtAtualizaValor"/>
 
-                <Entry x:Name="txtValorAferido" Text="0" FontAttributes="Bold" 
+                <local:CustomEntry x:Name="txtValorAferido" Text="0" FontAttributes="Bold" 
                        TextColor="{StaticResource ColorPrimary}" 
                        Keyboard="Numeric" 
                        HorizontalOptions="CenterAndExpand" 
@@ -52,36 +52,36 @@
                 <Frame Padding="10,3,10,3" HasShadow="False" BackgroundColor="{StaticResource ColorSecondaryLight}" Margin="0,3,0,0">
                     <StackLayout Orientation="Horizontal">
                         <Label Text="Dia:" VerticalOptions="CenterAndExpand" />
-                        <DatePicker x:Name="txtData" TextColor="{StaticResource ColorSecondary}" FontAttributes="Bold"
+                        <local:CustomDatePicker x:Name="txtData" TextColor="{StaticResource ColorSecondary}" FontAttributes="Bold"
                                     VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" />
                     </StackLayout>
                 </Frame>
                 <Frame Padding="10,3,10,3" HasShadow="False" BackgroundColor="{StaticResource ColorSecondaryLight}" Margin="0,3,0,0">
                         <StackLayout Orientation="Horizontal">
                             <Label Text="Hora" VerticalOptions="CenterAndExpand" />
-                            <TimePicker x:Name="txtHora" TextColor="{StaticResource ColorSecondary}" FontAttributes="Bold"
+                            <local:CustomTimePicker x:Name="txtHora" TextColor="{StaticResource ColorSecondary}" FontAttributes="Bold"
                                         VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" />
                         </StackLayout>
                     </Frame>
-                <Frame Padding="10,3,10,3" HasShadow="False" BackgroundColor="{StaticResource ColorSecondaryLight}" Margin="0,3,0,0">
+                    <Frame Padding="10,3,10,3" HasShadow="False" BackgroundColor="{StaticResource ColorSecondaryLight}" Margin="0,3,0,0">
                         <StackLayout Orientation="Horizontal">
                             <Label Text="Insulina:" VerticalOptions="CenterAndExpand"  />
-                            <Picker x:Name="pckInsulina" VerticalOptions="CenterAndExpand" 
+                            <local:CustomPicker x:Name="pckInsulina" VerticalOptions="CenterAndExpand" 
                                     TextColor="{StaticResource ColorSecondary}" FontAttributes="Bold"
-                                    Title="Selecione o período" FontSize="16" HorizontalOptions="FillAndExpand"
+                                    Title="Selecione o tipo insulina" FontSize="16" HorizontalOptions="FillAndExpand"
                                     SelectedIndexChanged="pckInsulina_SelectedIndexChanged">
                                 <Picker.Items>
                                 </Picker.Items>
-                            </Picker>
+                            </local:CustomPicker>
                         </StackLayout>
                     </Frame>
                     <Frame Padding="10,3,10,3" HasShadow="False" BackgroundColor="{StaticResource ColorSecondaryLight}" Margin="0,3,0,0">
                         <StackLayout Orientation="Horizontal">
                             <Label Text="Quantidade:" VerticalOptions="CenterAndExpand" />
-                            <Entry Text="0" x:Name="qtdInsulina" Keyboard="Numeric" 
-                                   TextColor="{StaticResource ColorSecondary}" FontAttributes="Bold"
-                                   VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" />
-                        </StackLayout>
+                            <local:CustomEntry Text="0" x:Name="qtdInsulina" Keyboard="Numeric" 
+                                       TextColor="{StaticResource ColorSecondary}" FontAttributes="Bold"
+                                       VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" />
+                    </StackLayout>
                     </Frame>
 
             </StackLayout>

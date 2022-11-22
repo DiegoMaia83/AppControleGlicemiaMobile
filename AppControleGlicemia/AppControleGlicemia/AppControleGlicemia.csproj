@@ -11,12 +11,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Effects\**" />
-    <EmbeddedResource Remove="Effects\**" />
-    <None Remove="Effects\**" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Remove="fonts\fa-regular-400.ttf" />
     <None Remove="fonts\fa-solid-900.ttf" />
   </ItemGroup>
