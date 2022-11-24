@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "irDD/SZEQYNKSTqFJfFqPQLNuwgq9ojE4yTWCzM7y2+a9CCnhfhN+EIyHMHU4npThujy5nJYqTGttMneh82g0A==",
+  "dgSpecHash": "jJql0P/LsmLkRCbgOcLnyJ58isQBhEJZ/e5Xzv18/5rGqCP1OYKLnItA5LFyMWBn9PzPNKEh2T8DqbD4uJRhtw==",
   "success": true,
   "projectFilePath": "D:\\Desenvolvimento\\Xamarin\\Projeto\\AppControleGlicemia\\AppControleGlicemia\\AppControleGlicemia.iOS\\AppControleGlicemia.iOS.csproj",
   "expectedPackageFiles": [
@@ -12,8 +12,8 @@
     "C:\\Users\\Home\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
     "C:\\Users\\Home\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Users\\Home\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.2\\system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.6.1\\xamarin.essentials.1.6.1.nupkg.sha512",
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\5.0.0.2012\\xamarin.forms.5.0.0.2012.nupkg.sha512"
+    "C:\\Users\\Home\\.nuget\\packages\\xamarin.essentials\\1.6.1\\xamarin.essentials.1.6.1.nupkg.sha512",
+    "C:\\Users\\Home\\.nuget\\packages\\xamarin.forms\\5.0.0.2012\\xamarin.forms.5.0.0.2012.nupkg.sha512"
   ],
   "logs": []
 }

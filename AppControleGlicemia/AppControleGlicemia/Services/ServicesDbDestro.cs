@@ -65,22 +65,6 @@ namespace AppControleGlicemia.Services
             }
         }
 
-        public List<ModelDestro> Listar()
-        {
-            List<ModelDestro> lista = new List<ModelDestro>();
-
-            try
-            {
-                lista = conn.Table<ModelDestro>().ToList();
-
-                return lista;
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.Message);
-            }
-        }
-
         public List<ModelDestro> Listar(int periodo)
         {
             //List<ModelDestro> lista = new List<ModelDestro>();
@@ -129,15 +113,16 @@ namespace AppControleGlicemia.Services
                     var destro = new ModelDestro();
                     destro = item;
                     destro.Stats = destro.ValorAferido > i ? "IconUp" : destro.ValorAferido < i ? "IconDown" : "IconEqual";
-
-                    if (String.IsNullOrEmpty(item.InsulinaTipo))
+                    
+                    if (String.IsNullOrEmpty(destro.InsulinaTipo))
                     {
-                        item.MostraInsulina = false;
+                        destro.MostraInsulina = false;
                     }
                     else
                     {
-                        item.MostraInsulina = true;
+                        destro.MostraInsulina = true;
                     }
+                    
 
                     i = item.ValorAferido;
 

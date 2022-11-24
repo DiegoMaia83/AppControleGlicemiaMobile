@@ -1,6 +1,5 @@
 D:\Desenvolvimento\Xamarin\Projeto\AppControleGlicemia\AppControleGlicemia\AppControleGlicemia\bin\Debug\netstandard2.0\AppControleGlicemia.deps.json
 D:\Desenvolvimento\Xamarin\Projeto\AppControleGlicemia\AppControleGlicemia\AppControleGlicemia\bin\Debug\netstandard2.0\AppControleGlicemia.dll
-D:\Desenvolvimento\Xamarin\Projeto\AppControleGlicemia\AppControleGlicemia\AppControleGlicemia\bin\Debug\netstandard2.0\ref\AppControleGlicemia.dll
 D:\Desenvolvimento\Xamarin\Projeto\AppControleGlicemia\AppControleGlicemia\AppControleGlicemia\bin\Debug\netstandard2.0\AppControleGlicemia.pdb
 D:\Desenvolvimento\Xamarin\Projeto\AppControleGlicemia\AppControleGlicemia\AppControleGlicemia\obj\Debug\netstandard2.0\AppControleGlicemia.GeneratedMSBuildEditorConfig.editorconfig
 D:\Desenvolvimento\Xamarin\Projeto\AppControleGlicemia\AppControleGlicemia\AppControleGlicemia\obj\Debug\netstandard2.0\App.xaml.g.cs
@@ -19,3 +18,4 @@ D:\Desenvolvimento\Xamarin\Projeto\AppControleGlicemia\AppControleGlicemia\AppCo
 D:\Desenvolvimento\Xamarin\Projeto\AppControleGlicemia\AppControleGlicemia\AppControleGlicemia\obj\Debug\netstandard2.0\ref\AppControleGlicemia.dll
 D:\Desenvolvimento\Xamarin\Projeto\AppControleGlicemia\AppControleGlicemia\AppControleGlicemia\obj\Debug\netstandard2.0\AppControleGlicemia.pdb
 D:\Desenvolvimento\Xamarin\Projeto\AppControleGlicemia\AppControleGlicemia\AppControleGlicemia\obj\Debug\netstandard2.0\AppControleGlicemia.csproj.AssemblyReference.cache
+D:\Desenvolvimento\Xamarin\Projeto\AppControleGlicemia\AppControleGlicemia\AppControleGlicemia\obj\Debug\netstandard2.0\refint\AppControleGlicemia.dll

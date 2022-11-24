@@ -42,7 +42,7 @@ namespace AppControleGlicemia.Views.Destro
             qtdInsulina.Text = destro.InsulinaQuantidade.ToString();
 
             // Preenche o picker com os tipos de insulina
-            PopularPickerInsulina();
+            PopularPickerInsulina(destro.InsulinaTipo);
         }
 
         private void btInserir_Clicked(object sender, EventArgs e)
@@ -58,9 +58,7 @@ namespace AppControleGlicemia.Views.Destro
                 destro.ValorAferido = Convert.ToInt32(txtValorAferido.Text);
                 destro.DataAferido = datetime;
                 destro.InsulinaTipo = pckInsulina.SelectedItem != null ? pckInsulina.SelectedItem.ToString() : "";
-                destro.InsulinaQuantidade = Convert.ToInt32(qtdInsulina.Text);
-                destro.Observacoes = "";
-
+                destro.InsulinaQuantidade = !String.IsNullOrEmpty(qtdInsulina.Text) ? Convert.ToInt32(qtdInsulina.Text) : 0;
 
                 ServicesDbDestro dbDestro = new ServicesDbDestro(App.DbPath);
 
@@ -134,8 +132,7 @@ namespace AppControleGlicemia.Views.Destro
                     ValorAferido = Convert.ToInt32(txtValorAferido.Text),
                     DataAferido = datetime,
                     InsulinaTipo = pckInsulina.SelectedItem != null ? pckInsulina.SelectedItem.ToString() : "",
-                    InsulinaQuantidade = Convert.ToInt32(qtdInsulina.Text),
-                    Observacoes = ""
+                    InsulinaQuantidade = !String.IsNullOrEmpty(qtdInsulina.Text) ? Convert.ToInt32(qtdInsulina.Text) : 0
                 };
 
                 ServicesDbDestro dbDestro = new ServicesDbDestro(App.DbPath);
@@ -179,6 +176,22 @@ namespace AppControleGlicemia.Views.Destro
             {
                 pckInsulina.Items.Add(item.Tipo);
             }
+
+            pckInsulina.Items.Add("Adicionar novo");
+        }
+
+        public void PopularPickerInsulina(string selecionado = "")
+        {
+            ServicesDbInsulina dbInsulina = new ServicesDbInsulina(App.DbPath);
+
+            var lista = dbInsulina.Listar();
+
+            foreach (var item in lista)
+            {
+                pckInsulina.Items.Add(item.Tipo);
+            }
+
+            pckInsulina.SelectedItem = selecionado;
 
             pckInsulina.Items.Add("Adicionar novo");
         }

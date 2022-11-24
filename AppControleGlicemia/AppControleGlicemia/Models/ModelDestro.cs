@@ -5,6 +5,7 @@ using System.Text;
 
 namespace AppControleGlicemia.Models
 {
+    [Preserve(AllMembers = true)]
     [Table("Destro")]
     public class ModelDestro
     {
@@ -21,11 +22,9 @@ namespace AppControleGlicemia.Models
 
         public int InsulinaQuantidade { get; set; }
 
-        [NotNull]
-        public string Observacoes { get; set; }
-
         [Ignore]
         public string Stats { get; set; }
+
         [Ignore]
         public bool MostraInsulina { get; set; }
     }

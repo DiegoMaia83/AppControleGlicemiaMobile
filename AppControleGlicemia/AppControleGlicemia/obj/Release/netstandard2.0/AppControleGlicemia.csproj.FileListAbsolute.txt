@@ -1,6 +1,5 @@
 D:\Desenvolvimento\Xamarin\Projeto\AppControleGlicemia\AppControleGlicemia\AppControleGlicemia\bin\Release\netstandard2.0\AppControleGlicemia.deps.json
 D:\Desenvolvimento\Xamarin\Projeto\AppControleGlicemia\AppControleGlicemia\AppControleGlicemia\bin\Release\netstandard2.0\AppControleGlicemia.dll
-D:\Desenvolvimento\Xamarin\Projeto\AppControleGlicemia\AppControleGlicemia\AppControleGlicemia\bin\Release\netstandard2.0\ref\AppControleGlicemia.dll
 D:\Desenvolvimento\Xamarin\Projeto\AppControleGlicemia\AppControleGlicemia\AppControleGlicemia\bin\Release\netstandard2.0\AppControleGlicemia.pdb
 D:\Desenvolvimento\Xamarin\Projeto\AppControleGlicemia\AppControleGlicemia\AppControleGlicemia\obj\Release\netstandard2.0\AppControleGlicemia.GeneratedMSBuildEditorConfig.editorconfig
 D:\Desenvolvimento\Xamarin\Projeto\AppControleGlicemia\AppControleGlicemia\AppControleGlicemia\obj\Release\netstandard2.0\App.xaml.g.cs
@@ -8,6 +7,7 @@ D:\Desenvolvimento\Xamarin\Projeto\AppControleGlicemia\AppControleGlicemia\AppCo
 D:\Desenvolvimento\Xamarin\Projeto\AppControleGlicemia\AppControleGlicemia\AppControleGlicemia\obj\Release\netstandard2.0\Views\Destro\PageDestroCadastro.xaml.g.cs
 D:\Desenvolvimento\Xamarin\Projeto\AppControleGlicemia\AppControleGlicemia\AppControleGlicemia\obj\Release\netstandard2.0\Views\Destro\PageDestroLista.xaml.g.cs
 D:\Desenvolvimento\Xamarin\Projeto\AppControleGlicemia\AppControleGlicemia\AppControleGlicemia\obj\Release\netstandard2.0\Views\PageHome.xaml.g.cs
+D:\Desenvolvimento\Xamarin\Projeto\AppControleGlicemia\AppControleGlicemia\AppControleGlicemia\obj\Release\netstandard2.0\Views\PageInsulina.xaml.g.cs
 D:\Desenvolvimento\Xamarin\Projeto\AppControleGlicemia\AppControleGlicemia\AppControleGlicemia\obj\Release\netstandard2.0\Views\PageMenu.xaml.g.cs
 D:\Desenvolvimento\Xamarin\Projeto\AppControleGlicemia\AppControleGlicemia\AppControleGlicemia\obj\Release\netstandard2.0\Views\PageSobre.xaml.g.cs
 D:\Desenvolvimento\Xamarin\Projeto\AppControleGlicemia\AppControleGlicemia\AppControleGlicemia\obj\Release\netstandard2.0\AppControleGlicemia.AssemblyInfoInputs.cache
@@ -17,3 +17,5 @@ D:\Desenvolvimento\Xamarin\Projeto\AppControleGlicemia\AppControleGlicemia\AppCo
 D:\Desenvolvimento\Xamarin\Projeto\AppControleGlicemia\AppControleGlicemia\AppControleGlicemia\obj\Release\netstandard2.0\AppControleGlicemia.dll
 D:\Desenvolvimento\Xamarin\Projeto\AppControleGlicemia\AppControleGlicemia\AppControleGlicemia\obj\Release\netstandard2.0\ref\AppControleGlicemia.dll
 D:\Desenvolvimento\Xamarin\Projeto\AppControleGlicemia\AppControleGlicemia\AppControleGlicemia\obj\Release\netstandard2.0\AppControleGlicemia.pdb
+D:\Desenvolvimento\Xamarin\Projeto\AppControleGlicemia\AppControleGlicemia\AppControleGlicemia\obj\Release\netstandard2.0\AppControleGlicemia.csproj.AssemblyReference.cache
+D:\Desenvolvimento\Xamarin\Projeto\AppControleGlicemia\AppControleGlicemia\AppControleGlicemia\obj\Release\netstandard2.0\refint\AppControleGlicemia.dll
