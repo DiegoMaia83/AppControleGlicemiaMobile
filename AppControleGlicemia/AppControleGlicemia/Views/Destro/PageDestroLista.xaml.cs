@@ -14,7 +14,9 @@ namespace AppControleGlicemia.Views.Destro
         {
             InitializeComponent();
 
-            AtualizaLista(0);
+            pckPeriodo.SelectedIndex = 2;
+
+            AtualizaLista(2);
         }
 
         public void AtualizaLista(int idxPeriodo)

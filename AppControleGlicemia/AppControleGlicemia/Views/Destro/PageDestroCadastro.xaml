@@ -66,18 +66,18 @@
                     <Frame Padding="10,3,10,3" HasShadow="False" BackgroundColor="{StaticResource ColorSecondaryLight}" Margin="0,3,0,0">
                         <StackLayout Orientation="Horizontal">
                             <Label Text="Insulina:" VerticalOptions="CenterAndExpand"  />
-                            <Picker x:Name="pckInsulina" VerticalOptions="CenterAndExpand" 
+                            <local:CustomPicker x:Name="pckInsulina" VerticalOptions="CenterAndExpand" 
                                     TextColor="{StaticResource ColorSecondary}" FontAttributes="Bold"
                                     Title="Selecione o tipo insulina" FontSize="16" HorizontalOptions="FillAndExpand"
                                     SelectedIndexChanged="pckInsulina_SelectedIndexChanged">
                                 <Picker.Items>
                                 </Picker.Items>
-                            </Picker>
+                            </local:CustomPicker>
                         </StackLayout>
                     </Frame>
                     <Frame Padding="10,3,10,3" HasShadow="False" BackgroundColor="{StaticResource ColorSecondaryLight}" Margin="0,3,0,0">
                         <StackLayout Orientation="Horizontal">
-                            <Label Text="Quantidade:" VerticalOptions="CenterAndExpand" />
+                            <Label Text="Unidades de Insulina:" VerticalOptions="CenterAndExpand" />
                             <local:CustomEntry Text="0" x:Name="qtdInsulina" Keyboard="Numeric" 
                                        TextColor="{StaticResource ColorSecondary}" FontAttributes="Bold"
                                        VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" />

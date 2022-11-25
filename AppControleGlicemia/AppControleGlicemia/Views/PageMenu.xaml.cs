@@ -1,5 +1,6 @@
 ﻿using AppControleGlicemia.Views.Destro;
 using System;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -44,6 +45,11 @@ namespace AppControleGlicemia.Views
         {
             this.Detail = new NavigationPage(new PageInsulina());
             IsPresented = false;
+        }
+
+        private void btPrivacidade_Tapped(object sender, EventArgs e)
+        {
+            Browser.OpenAsync("http://www.devmaia.com.br/privacidade/glicapp");
         }
     }
 }

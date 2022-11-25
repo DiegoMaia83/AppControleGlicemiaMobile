@@ -29,7 +29,7 @@ namespace AppControleGlicemia.Views.Destro {
         private global::AppControleGlicemia.Custom.CustomTimePicker txtHora;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::Xamarin.Forms.Picker pckInsulina;
+        private global::AppControleGlicemia.Custom.CustomPicker pckInsulina;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private global::AppControleGlicemia.Custom.CustomEntry qtdInsulina;
@@ -56,7 +56,7 @@ namespace AppControleGlicemia.Views.Destro {
             txtValorAferido = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::AppControleGlicemia.Custom.CustomEntry>(this, "txtValorAferido");
             txtData = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::AppControleGlicemia.Custom.CustomDatePicker>(this, "txtData");
             txtHora = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::AppControleGlicemia.Custom.CustomTimePicker>(this, "txtHora");
-            pckInsulina = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Picker>(this, "pckInsulina");
+            pckInsulina = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::AppControleGlicemia.Custom.CustomPicker>(this, "pckInsulina");
             qtdInsulina = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::AppControleGlicemia.Custom.CustomEntry>(this, "qtdInsulina");
             gridBtAlterar = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.StackLayout>(this, "gridBtAlterar");
             btAlterar = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Button>(this, "btAlterar");
